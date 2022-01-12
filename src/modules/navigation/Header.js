@@ -124,34 +124,15 @@ const HeaderNav = ({headerLinks, hideMenu}) => {
           }}>
           {t('Home')}
         </Link>
+
         <Link
-          to={'/love'}
+          to={'/learn'}
           hideExternalIcon
           sx={{
             fontWeight: 'normal',
             flexShrink: 0
           }}>
-          {t('Love')}
-        </Link>
-        {headerLinks.map(({url, title}, index) => (
-          <Link
-            to={url}
-            hideExternalIcon
-            key={`header-link-${index}`}
-            sx={{
-              fontWeight: 'normal',
-              flexShrink: 0
-            }}>
-            {title}
-          </Link>
-        ))}
-        <Link
-          to={'/blog'}
-          sx={{
-            fontWeight: 'normal',
-            flexShrink: 0
-          }}>
-          {t('Blog')}
+          {t('Learn')}
         </Link>
       </Flex>
     </Fragment>
