@@ -17,11 +17,11 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: `Kernel`,
-    description: `A curated community of brilliance in web3.`,
-    author: `Kernel Community Team`,
+    title: `Ocean Marketplace Launchpad`,
+    description: `Learn how to create your own data marketplace`,
+    author: `Ocean Protocol Foundation`,
     copyright: '',
-    siteUrl: 'https://kernel.community/'
+    siteUrl: 'https://oceanprotocol.com'
   },
   plugins: [
     'gatsby-plugin-theme-ui',
@@ -52,13 +52,7 @@ module.exports = {
         path: `${__dirname}/content`
       }
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `blogPosts`,
-        path: `${__dirname}/blogPosts`
-      }
-    },
+
     {
       resolve: 'gatsby-plugin-page-creator',
       options: {
@@ -79,26 +73,7 @@ module.exports = {
         }
       }
     },
-    {
-      resolve: 'gatsby-plugin-page-creator',
-      options: {
-        path: `${__dirname}/blogPosts`,
-        ignore: {
-          patterns: [
-            `**/header.mdx`,
-            `**/**.js`,
-            `**/**.json`,
-            `**/404.mdx`,
-            `**/example.mdx`,
-            `**/footer.mdx`,
-            `**/**.pptx`,
-            '**/**.jpg',
-            '**/**.png'
-          ],
-          options: {nocase: true}
-        }
-      }
-    },
+
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
@@ -128,8 +103,7 @@ module.exports = {
       options: {
         extensions: [`.mdx`, `.md`],
         defaultLayouts: {
-          default: require.resolve('./src/modules/layouts/default_layout.js'),
-          blogPosts: require.resolve('./src/modules/layouts/blogPost_layout.js')
+          default: require.resolve('./src/modules/layouts/default_layout.js')
         },
         remarkPlugins: [remarkSlug],
         gatsbyRemarkPlugins: [
@@ -204,11 +178,8 @@ module.exports = {
             type: (node) => {
               if (node.frontmatter.type) {
                 return node.frontmatter.type;
-              } else if (node.fileAbsolutePath.includes('/blogPosts/')) {
-                return getBlogPostTypeFromPath(node.fileAbsolutePath);
               }
             },
-            isBlog: (node) => node.fileAbsolutePath.includes('/blogPosts/'),
             url: UrlConverter,
             excerpt: (node) => {
               const excerptLength = 200; // Hard coded excerpt length
@@ -274,8 +245,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Kernel Community`,
-        short_name: `Kernel`,
+        name: `Ocean Protocol Data Marketplace Launchpad`,
+        short_name: `Ocean`,
         start_url: `/`,
         background_color: '#291a42',
         theme_color: '#5AE2CA',

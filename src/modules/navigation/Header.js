@@ -136,7 +136,7 @@ const HeaderNav = ({headerLinks, hideMenu}) => {
         </Link>
 
         <Link
-          to={'/faq'}
+          to={'/learn/faq'}
           hideExternalIcon
           sx={{
             fontWeight: 'normal',
