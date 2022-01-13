@@ -96,7 +96,7 @@ function SEO({description, lang, meta, title, keywords, url, featuredImage}) {
           content: theme.colors.primary
         }
       ].concat(meta)}>
-      <link rel="icon" href={'/images/icons/favicon.ico'} />
+      <link rel="icon" href={'/images/icons/favicon-white.png'} />
     </Helmet>
   );
 }

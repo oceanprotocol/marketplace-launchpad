@@ -200,11 +200,11 @@ export default {
   }, //<- Icon package
   colors: {
     ...maker.colors, //<- Deconstruct maker.colors so default colors aren't lost.
-    primary: '#6166DC',
-    primaryEmphasis: '#2f2f59',
+    primary: '#7b1173',
+    primaryEmphasis: '#ff4092',
     primaryAlt: '#1AAA9B',
-    primaryMuted: '#bbbded',
-    secondary: '#FFB400',
+    primaryMuted: '#e000cf',
+    secondary: '#1AAA9B',
     secondaryEmphasis: '#e09f00',
     secondaryAlt: '#FBA615',
     secondaryMuted: '#FFF3DD',
@@ -219,7 +219,7 @@ export default {
     mutedAlt: '#90969C',
     // mutedAlt: '',
     mutedDark: '#757087',
-    kernelPurple: '#9090F1',
+    kernelPurple: '#7b1173',
     kernelGreen: '#25E899',
     error: '#EE565B',
     success: '#46B17B',
@@ -366,12 +366,14 @@ export default {
     round: '32px'
   },
   fonts: {
-    serif: 'Miriam Libre',
-    sanserif: 'Libre Franklin',
+    serif:
+      'Fira Code, Fira Mono, Menlo, Monaco, Consolas, Courier New, monospace',
+    sanserif:
+      'Sharp Sans, -apple-system, BlinkMacSystemFont,Segoe UI, Helvetica, Arial, sans-serif',
     body:
-      'Libre Franklin, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif',
+      'Sharp Sans, -apple-system, BlinkMacSystemFont,Segoe UI, Helvetica, Arial, sans-serif',
     heading:
-      'Miriam Libre, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif'
+      'Sharp Sans Display, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif'
   },
   styles: {
     ...maker.styles,

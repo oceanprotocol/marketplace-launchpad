@@ -1,0 +1,65 @@
+code {
+  font-family: var(--font-family-monospace);
+  font-size: var(--font-size-small);
+  color: var(--brand-grey);
+  text-shadow: none;
+}
+
+:not(pre) > code {
+  display: inline-block;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+pre {
+  display: block;
+  margin: calc(var(--spacer) / 2) 0;
+  padding: calc(var(--spacer) / 2);
+  background-color: var(--brand-grey-dimmed) !important;
+  border-radius: var(--border-radius);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  max-height: 800px;
+  width: 100%;
+  position: relative;
+}
+
+pre code {
+  padding: 0;
+  white-space: pre;
+  display: block;
+  overflow-wrap: normal;
+  word-wrap: normal;
+  word-break: normal;
+  width: 100%;
+}
+
+pre[data-language]::before {
+  background: var(--brand-grey-lighter);
+  border-radius: 0 0 var(--border-radius) 0;
+  color: var(--brand-grey);
+  font-size: var(--font-size-mini);
+  font-family: var(--font-family-monospace);
+  letter-spacing: 0.05em;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  position: absolute;
+  right: calc(var(--spacer) / 2);
+  top: 0;
+}
+
+pre[data-language]::before {
+  content: attr(data-language);
+}
+
+.darker-light-mno-lht .mtk1 {
+  color: var(--brand-grey) !important;
+}
+
+.darker-light-mno-lht .mtk3 {
+  color: var(--brand-grey-light) !important;
+}
+
+.darker-light-mno-lht .mtk4 {
+  color: var(--brand-grey-light) !important;
+}
