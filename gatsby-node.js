@@ -84,8 +84,8 @@ exports.createPages = async ({graphql, actions}) => {
   });
 
   createRedirect({
-    fromPath: '/module-1/meaning',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-1/meaning`
+    fromPath: '/module-1/introduction',
+    toPath: `/${FALLBACK_LOCALE}/learn/module-1/introduction`
   });
 
   createRedirect({
@@ -104,8 +104,8 @@ exports.createPages = async ({graphql, actions}) => {
   });
 
   createRedirect({
-    fromPath: '/module-1/value',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-1/value`
+    fromPath: '/module-1/core-concepts',
+    toPath: `/${FALLBACK_LOCALE}/learn/module-1/core-concepts`
   });
 
   createRedirect({
