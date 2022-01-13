@@ -1,0 +1,34 @@
+.address {
+  color: var(--brand-grey-light);
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 25%;
+  margin-top: 60%;
+}
+
+.logo {
+  display: block;
+  width: fit-content;
+  margin-bottom: calc(var(--spacer) * 1.5);
+}
+
+.copyright {
+  margin: 0;
+  align-self: flex-end;
+}
+
+.copyright,
+.copyright small {
+  font-size: var(--font-size-mini);
+}
+
+.copyright p:last-child {
+  margin-bottom: 0;
+}
+
+.copyright a,
+.copyright button {
+  color: inherit;
+  border-bottom: 1px dotted var(--brand-grey-light);
+  font-size: var(--font-size-mini);
+}
