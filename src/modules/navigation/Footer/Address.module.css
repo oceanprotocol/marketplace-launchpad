@@ -19,7 +19,7 @@
 
 .copyright,
 .copyright small {
-  font-size: var(--font-size-mini);
+  font-size: 10px;
 }
 
 .copyright p:last-child {

@@ -107,8 +107,8 @@ const HeaderNav = ({headerLinks, hideMenu}) => {
           display: ['none', 'none', 'flex'],
           flex: 'auto',
           ml: [3, 3, '56px'],
-          alignItems: 'center',
-          justifyContent: 'center',
+          alignItems: 'left',
+          justifyContent: 'left',
           '& > a': {fontSize: '16px', p: 2, textAlign: 'center'},
           '& > a:not(:last-child)': {mr: '1.4vw'}
         }}>
@@ -133,6 +133,16 @@ const HeaderNav = ({headerLinks, hideMenu}) => {
             flexShrink: 0
           }}>
           {t('Learn')}
+        </Link>
+
+        <Link
+          to={'/faq'}
+          hideExternalIcon
+          sx={{
+            fontWeight: 'normal',
+            flexShrink: 0
+          }}>
+          {t('FAQ')}
         </Link>
       </Flex>
     </Fragment>
@@ -256,7 +266,7 @@ const Header = () => {
           sx={{
             width: ['100%', '100%', 'auto'],
             ml: [3, 3, '3rem'],
-            alignItems: 'center',
+            alignItems: 'left',
             letterSpacing: '0.3px',
             color: 'onBackgroundAlt',
             flexDirection: 'row'
@@ -276,7 +286,7 @@ const Header = () => {
             }}
           />
 
-          <ColorModeToggles />
+          {/* <ColorModeToggles /> */}
         </Flex>
         <Icon
           size={'39px'}
@@ -303,7 +313,7 @@ const Header = () => {
             position: 'absolute',
             zIndex: 1,
             opacity: 0,
-            transformOrigin: 'center',
+            transformOrigin: 'left',
             transform: 'scaleX(0)',
             transition: 'all .1s cubic-bezier(0.65, 0, 0.35, 1)'
           },
