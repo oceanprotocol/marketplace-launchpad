@@ -89,8 +89,8 @@ exports.createPages = async ({graphql, actions}) => {
   });
 
   createRedirect({
-    fromPath: '/module-1/playdough-protocols',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-1/playdough-protocols`
+    fromPath: '/module-1/user-flows',
+    toPath: `/${FALLBACK_LOCALE}/learn/module-1/user-flows`
   });
 
   createRedirect({
