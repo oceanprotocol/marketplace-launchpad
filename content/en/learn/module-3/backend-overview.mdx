@@ -1,0 +1,91 @@
+---
+title: 🔍 Backend overview
+order: 1
+hideLanguageSelector: true
+description: How can you hope to improve the world if you do not know how to improve yourself? We'll take a moment to understand our own motivations before considering what taking back the web really means.
+featuredImage: images/shares/intention.png
+---
+
+# 🔍 Backend overview
+
+Nunc feugiat tincidunt nunc, at vestibulum ligula tristique ut. Fusce a faucibus diam. Duis a euismod nisi. Ut a tristique ante, a placerat diam. Morbi sit amet auctor nunc. Aliquam a libero nulla. Maecenas eget justo id massa gravida blandit.
+
+Nullam rutrum erat non scelerisque aliquet. Fusce risus tortor, lobortis id dolor sit amet, vestibulum tincidunt diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ornare iaculis justo eget dictum. Nam ac sem vel eros vestibulum elementum in eleifend risus. Aenean porta eros massa, eget porta ante pulvinar a. Nulla vel risus semper, consequat.
+
+<Video src="https://www.youtube.com/embed/-smidDpSrOY" />
+
+---
+
+
+## Overview of Ocean backend components
+
+Praesent vitae consectetur dui. Ut lacinia massa erat, sed placerat turpis venenatis non. 
+
+Fusce eros turpis, vehicula eget aliquet ac, tempor ac arcu. Nullam sodales turpis id enim iaculis fermentum. Mauris ac faucibus magna. Nulla at diam ac sem ornare fringilla finibus a sapien. Donec scelerisque sit amet quam mollis venenatis. Morbi sed eros lacus. Duis vehicula sed diam nec condimentum. Vestibulum at felis a justo facilisis malesuada nec nec sapien. Integer ac elit consequat urna pharetra pulvinar. Aliquam in ex massa. 
+
+Curabitur bibendum ultricies massa iaculis posuere. Etiam tincidunt blandit nisi vel posuere. Donec et massa et est semper.
+
+## Introduction on using an RPC
+
+Aenean nulla nibh, tristique ac mollis quis, porta eu sem. Duis et metus ac mi bibendum facilisis a id leo. Nullam.
+
+Mauris volutpat est eu consequat vulputate. Nulla posuere aliquet mauris vel mattis.
+
+
+<Process>
+
+Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+
+Pellentesque gravida tincidunt felis, non consequat sapien consectetur non. Suspendisse malesuada aliquet turpis sit amet sodales. 
+
+Proin nec nisi lacinia, egestas nisi et, dignissim justo. Cras fringilla bibendum nunc, at euismod est dictum eget. 
+
+Sed imperdiet, est id congue faucibus, velit nulla tincidunt mauris, at tincidunt magna quam ut quam. Ut eget neque et turpis vulputate commodo. 
+
+</Process>
+
+## Setting up and running Barge, 
+### (including explanations on the different running options.)
+
+#### Get Started
+
+If you're new to Barge, it's best to start with the defaults:
+
+```
+git clone git@github.com:oceanprotocol/barge.git
+```
+```
+cd barge
+```
+```
+./start_ocean.sh
+```
+
+This will run the current default versions of Aquarius, Provider, and Ganache with our contracts deployed to it.
+
+You can override the Docker image tag used for a particular component by setting its associated environment variable before calling `start_ocean.sh`:
+
+For example:
+
+```bash
+export AQUARIUS_VERSION=v2.0.0
+./start_ocean.sh
+```
+
+### All Running Options
+
+| Option                     | Description                                                                                     |
+| -------------------------- | ----------------------------------------------------------------------------------------------- |
+| `--no-aquarius`            | Start up Ocean without the `aquarius` Building Block.                                           |
+| `--no-elasticseach`        | Start up Ocean without the `elasticsearch` Building Block.                                      |
+| `--no-provider`            | Start up Ocean without the `provider` Building Block.                                           |
+| `--with-provider2`         | Runs a 2nd provider, on port 8031. This is required for ocean.js/ocean.py integration tests. 2nd Provider will use the same image and parameters (log_level, ipfs gateway, compute gateway, etc) as provider1, but has a different private key     |
+| `--no-ganache`             | Start up Ocean without the `ganache` Building Block.                                            |
+| `--no-dashboard`           | Start up Ocean without the `dashboard` Building Block.                                          |
+| `--with-rbac`              | Start up Ocean with RBAC Server                                                                 |
+| `--with-thegraph`          | Start up Ocean with graphnode, ipfs & postgresql                                                |
+| `--skip-deploy`            | Start up Ocean without deploying the contracts. Useful when ethereum node already has contracts.|
+| `--force-pull`             | Force pulling the latest revision of the used Docker images.                                    |
+| `--purge`                  | Removes the Docker containers, volumes, artifact folder and networks used by the script.        |
+| `--exposeip`               | Binds the components to that specific ip. Example: `./start_ocean.sh --exposeip 192.168.0.1`    |
+
