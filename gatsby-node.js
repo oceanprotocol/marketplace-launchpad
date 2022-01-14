@@ -119,8 +119,8 @@ exports.createPages = async ({graphql, actions}) => {
   });
 
   createRedirect({
-    fromPath: '/module-2/better-questions',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-2/better-questions`
+    fromPath: '/module-2/forking-ocean-market',
+    toPath: `/${FALLBACK_LOCALE}/learn/module-2/forking-ocean-market`
   });
 
   createRedirect({
@@ -134,13 +134,13 @@ exports.createPages = async ({graphql, actions}) => {
   });
 
   createRedirect({
-    fromPath: '/module-2/money-speech',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-2/money-speech`
+    fromPath: '/module-2/customising-market',
+    toPath: `/${FALLBACK_LOCALE}/learn/module-2/customising-market`
   });
 
   createRedirect({
-    fromPath: '/module-2/shelling-out',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-2/shelling-out`
+    fromPath: '/module-2/deploying-market',
+    toPath: `/${FALLBACK_LOCALE}/learn/module-2/deploying-market`
   });
 
   createRedirect({
