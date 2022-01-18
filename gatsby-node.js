@@ -131,6 +131,16 @@ exports.createPages = async ({graphql, actions}) => {
     fromPath: '/level-4/',
     toPath: `/${FALLBACK_LOCALE}/learn/level-4`
   });
+
+  createRedirect({
+    fromPath: '/level-5/',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-5`
+  });
+
+  createRedirect({
+    fromPath: '/level-6/',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-6`
+  });
 };
 
 exports.onCreatePage = async ({page, actions}) => {
