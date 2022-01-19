@@ -128,8 +128,23 @@ exports.createPages = async ({graphql, actions}) => {
   });
 
   createRedirect({
-    fromPath: '/level-4/',
-    toPath: `/${FALLBACK_LOCALE}/learn/level-4`
+    fromPath: '/level-3/module-5',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-3/module-5`
+  });
+
+  createRedirect({
+    fromPath: '/level-3/module-6',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-3/module-6`
+  });
+
+  createRedirect({
+    fromPath: '/level-3/module-7',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-3/module-7`
+  });
+
+  createRedirect({
+    fromPath: '/level-3/module-8',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-3/module-8`
   });
 
   createRedirect({
