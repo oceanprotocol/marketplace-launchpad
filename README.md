@@ -1,4 +1,4 @@
-# [Kernel Community](https://kernel.community)
+# Ocean Marketplace Launchpad
 
 Learn how to setup your own data marketplace with blockchain super powers!
 
@@ -17,4 +17,3 @@ cd kernel-v2
 yarn
 yarn start
 ```
-
