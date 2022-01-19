@@ -153,13 +153,18 @@ exports.createPages = async ({graphql, actions}) => {
   });
 
   createRedirect({
-    fromPath: '/level-6/',
-    toPath: `/${FALLBACK_LOCALE}/learn/level-6`
+    fromPath: '/support/',
+    toPath: `/${FALLBACK_LOCALE}/learn/support`
   });
 
   createRedirect({
-    fromPath: '/enterprise',
-    toPath: `/${FALLBACK_LOCALE}/enterprise`
+    fromPath: '/enterprise/co-creation',
+    toPath: `/${FALLBACK_LOCALE}/enterprise/co-creation`
+  });
+
+  createRedirect({
+    fromPath: '/enterprise/consultation',
+    toPath: `/${FALLBACK_LOCALE}/enterprise/consultation`
   });
 };
 
