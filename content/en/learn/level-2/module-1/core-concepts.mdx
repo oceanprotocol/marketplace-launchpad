@@ -26,35 +26,90 @@ Get started today!
 
 ## What is a Data NFT?
 
-Nam vel scelerisque nibh. Nulla rhoncus, neque vel vulputate dignissim, dolor massa facilisis erat, accumsan sagittis elit lectus sed mauris. Donec sollicitudin est in sapien gravida, et viverra nulla molestie. Fusce tristique turpis nunc, posuere bibendum tellus interdum sed. In justo augue, finibus eu maximus quis, aliquam vel nibh. Nulla molestie neque velit, a egestas magna ultrices at. Etiam vehicula nisl a quam tincidunt elementum. Proin dictum, dolor vel egestas fringilla, risus lorem semper neque, non semper neque turpis vel purus. Suspendisse justo tortor, imperdiet ac placerat rutrum, pharetra nec dui. Proin malesuada auctor orci ut lobortis. Orci varius natoque.
+NFTs are tokens that we can use to represent ownership of unique items. They let us tokenise things like art, collectibles, even real estate. They can only have one official owner at a time and they're secured by the Ethereum blockchain – no one can modify the record of ownership or copy/paste a new NFT into existence.
 
-Integer feugiat feugiat ultricies. Ut arcu diam, porttitor vitae molestie porttitor, pharetra vitae odio. Fusce ac tincidunt orci, at cursus ex. Etiam volutpat ligula sit amet velit commodo interdum. Aenean varius diam quis tincidunt euismod. Praesent dignissim varius semper. Mauris pharetra ut metus eu malesuada. Fusce ornare massa sed massa faucibus, vel pulvinar risus aliquam. Fusce maximus nibh neque, a sollicitudin neque viverra et. Aenean at tristique dui. Etiam laoreet ultricies risus ac rutrum. Nam tincidunt tempus tellus, at ullamcorper enim convallis vitae. Curabitur id lorem tincidunt, ultricies turpis ut, ornare urna. Suspendisse eget volutpat augue. Donec maximus aliquam mauris.
+NFT stands for non-fungible token. Non-fungible is an economic term that you could use to describe things like your furniture, a song file, or your computer. These things are not interchangeable for other items because they have unique properties.
 
-Donec ac ex tempor, lacinia sem id, pulvinar velit. Vivamus quis dui leo. Curabitur eu maximus dolor, id consequat ligula. Duis varius sapien in urna ullamcorper, id luctus turpis egestas. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam.
+Fungible items, on the other hand, can be exchanged because their value defines them rather than their unique properties. For example, ETH or dollars are fungible because 1 ETH / $1 USD is exchangeable for another 1 ETH / $1 USD.
 
+<Process>
+A way to represent anything unique as an Ethereum-based asset.
+
+NFTs are giving more power to content creators than ever before.
+
+Powered by smart contracts on the Ethereum blockchain.
+</Process>
 
 ## What is a datatoken?
 
-Morbi non nisl gravida, dignissim eros quis, dapibus dui. Donec at efficitur lectus, nec cursus ipsum. Duis consequat posuere odio, a rhoncus leo ornare tempus. Curabitur eget auctor metus. In accumsan est nec lacinia eleifend. Suspendisse auctor dignissim lacus, congue congue magna semper quis. Nunc tempor, magna vel convallis congue, quam turpis maximus orci, quis bibendum velit nibh vel turpis. Proin convallis ultrices mauris a malesuada. Aliquam erat volutpat. In vestibulum varius hendrerit. Nunc vel nisl nibh.
+Every asset (dataset, algorithm) in the Ocean Network has an associated datatoken, which is an ERC20 token.
 
-Sed eget ipsum aliquam, vehicula erat vel, ultricies nisi. Pellentesque lacinia, erat quis hendrerit convallis, nisi ante pellentesque quam, in condimentum lectus tellus.
+A datatoken acts as an access token: If you have 1.0 datatokens, you can access the data by sending it to the Provider
+
+In order to create pricing schemas, you have to sell the datatokens to users using either a Fixed Rate Exchange (FRE) schema, either creating an AMM Pool, thus having price discovery.
+
 
 ## What is a DID and a DDO?
 
-Phasellus eget mauris et felis venenatis fringilla vel ultrices nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent dapibus tincidunt egestas. Vestibulum mattis tellus mi, ut vestibulum metus eleifend volutpat. Pellentesque porta nec turpis ac vehicula. Vestibulum eget luctus augue. Mauris faucibus iaculis convallis. Integer consequat vel nisi vel aliquam. Sed finibus lorem at gravida venenatis.
+Every asset (dataset, algorithm) in Ocean has an associated Decentralized Identifier (DID) and DID Descriptor Object (DDO). Because assets without proper descriptive metadata have poor visibility and discoverability.
+
+Ocean Protocol has its own identifier in W3C schema   (did:op:)
+
+A DDO document is composed of standard DDO attributes:
+- did
+- created
+- updated
+- publicKey
+- authentication
+- proof
+- Services (See below)
+
+### DDO Services
+
+Each type of asset (dataset, algorithm, etc, ..) typically will have associated different kind of services. This are the types of services that are commonly added to all the assets:
+- metadata - describing the asset
+- access - describe conditions to be fulfilled in order to consume this data
+- compute -  describe conditions to be fulfilled in order to run compute on top of the data
 
 
-## What are the different components of the Ocean architecture?  
+## What are the different components of the Ocean architecture? 
 
-Nam vel scelerisque nibh. Nulla rhoncus, neque vel vulputate dignissim, dolor massa facilisis erat, accumsan sagittis elit lectus sed mauris. Donec sollicitudin est in sapien gravida, et viverra nulla molestie. Fusce tristique turpis nunc, posuere bibendum tellus interdum sed. In justo augue, finibus eu maximus quis, aliquam vel nibh. Nulla molestie neque velit, a egestas magna ultrices at. Etiam vehicula nisl a quam tincidunt elementum. Proin dictum, dolor vel egestas fringilla, risus lorem semper neque, non semper neque turpis vel purus. Suspendisse justo tortor, imperdiet ac placerat rutrum, pharetra nec dui. Proin malesuada auctor orci ut lobortis. Orci varius natoque.
+<Process>
+Level 1 - Network level (Smart Contracts)
 
-Integer feugiat feugiat ultricies. Ut arcu diam, porttitor vitae molestie porttitor, pharetra vitae odio. Fusce ac tincidunt orci, at cursus ex. Etiam volutpat ligula sit amet velit commodo interdum. Aenean varius diam quis tincidunt euismod. Praesent dignissim varius semper. Mauris pharetra ut metus eu malesuada. Fusce ornare massa sed massa faucibus, vel pulvinar risus aliquam. Fusce maximus nibh neque, a sollicitudin neque viverra et. Aenean at tristique dui. Etiam laoreet ultricies risus ac rutrum. Nam tincidunt tempus tellus, at ullamcorper enim convallis vitae. Curabitur id lorem tincidunt, ultricies turpis ut, ornare urna. Suspendisse eget volutpat augue. Donec maximus aliquam mauris.
+Level 2 - Component level (Backend components and Libraries)
 
-Donec ac ex tempor, lacinia sem id, pulvinar velit. Vivamus quis dui leo. Curabitur eu maximus dolor, id consequat ligula. Duis varius sapien in urna ullamcorper, id luctus turpis egestas. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam.
+Level 3 - Decentralised applications (DApps) - Ocean Market etc.
+</Process>
 
 
 ## What networks does Ocean Protocol run on? 
 
-Fusce diam purus, faucibus in enim nec, finibus porta turpis. Ut nec cursus mauris. Aenean non orci eu massa hendrerit semper ut nec tellus. Cras non est turpis. Sed consectetur enim.
+### Production networks:
+<Process>
+Ethereum mainnet
 
+Polygon (formerly: Matic)
 
+Binance Smart Chain (BSC)
+
+Moonriver
+
+Energy Web Chain
+</Process>
+
+### Test Networks
+
+<Process>
+Rinkeby 
+
+Ropsten 
+
+Polygon Mumbai
+
+Moonbase Alpha
+
+Gaia-X Testnet
+
+Ganache (local, e.g. via Ocean Barge)
+</Process>

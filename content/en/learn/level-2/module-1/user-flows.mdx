@@ -10,54 +10,56 @@ featuredImage: images/creatures/dolphin/dolphin-full-light.svg
 
 
 
-Sed ornare tortor eu felis interdum bibendum. Ut vitae dui vestibulum, commodo dui non, dictum ante. Morbi non nulla massa. Vestibulum imperdiet faucibus suscipit. Fusce volutpat faucibus tellus at posuere. Fusce semper, massa ac ornare sollicitudin, dolor tellus rhoncus felis, eu cursus eros nibh vestibulum odio. Ut pellentesque nulla ut rhoncus blandit. Aenean pellentesque maximus nibh, a semper purus rutrum gravida. Curabitur faucibus in elit viverra ullamcorper.
+Ocean Market provides a convenient and familiar interface for you to publish and sell your data. If you haven’t seen it before, now is a good time to have a look at the site. You’ll find it looks a lot like any other data marketplace — running the blockchain doesn’t compromise usability.
 
-Maecenas ac diam efficitur, fermentum risus eu, faucibus ex. In in urna molestie leo ullamcorper fermentum quis lacinia ipsum. Ut vitae lectus lectus. Integer vitae lorem vitae lectus porttitor blandit. In hac habitasse.
+What you decide to sell via Ocean is entirely up to you. The dataset can comprise images, location information, audio, video, sales data, or combinations of them all. There is no exhaustive list of what type of data can be published, you can be as creative as you want. Just make sure that the data you’re selling is legal and not in breach of copyright or other regulations, our policies can be found here.
+
+There are only a few unfamiliar things you need to get used to when selling data over the blockchain:
+- Every interaction with the blockchain costs money. There is no centralised company controlling the system that is going to pay for computation and server costs, so the user must pay. This is called the gas fee — it’s basically like putting gas into your car to make it run.
+- You need to have a wallet to store the cryptocurrency that you will be paying for these gas fees. This can easily be set up as a browser extension.
+- Each time you interact with the blockchain, you will be asked to “sign” a transaction. This is the process where you pay the gas fees and verify the origin of the transaction. It is equivalent to being asked to enter your pin when you pay with a credit card.
 
 ## How does publishing work in Ocean Protocol? 
 
-Nullam venenatis urna viverra massa lobortis, a sagittis quam mattis. Curabitur condimentum nisi purus, eu mattis felis pretium vehicula. Aliquam ultrices facilisis dui vel suscipit. Quisque dictum vehicula nisl, sed suscipit lacus egestas quis. Fusce vehicula eleifend quam, eu hendrerit lorem dignissim sed. Nullam convallis tortor sed metus molestie luctus. Donec accumsan nunc sit amet augue maximus, a tempor ipsum scelerisque. Praesent porta mi a tellus dictum, a pretium nisl lobortis.
+If you’re familiar with the blockchain space, you may be wondering which blockchain Ocean Protocol uses. It was originally deployed on Ethereum but we have since deployed to four other chains, and there will be more to come in the future.
 
-Integer finibus condimentum tortor, nec volutpat libero aliquet a. Vestibulum vulputate porta arcu, sit amet feugiat neque blandit a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur.
+It is important to note that the gas cost associated with signing transactions on different blockchains varies significantly. For the purpose of this guide, we will be focusing on how to publish datasets on the Ethereum blockchain, as it is the most ubiquitous. However — it is also the most expensive. If you would like to explore a cheaper option, we would recommend reading our blog post on using Polygon. We also have instructions in our documentation on how to transfer funds from Ethereum to Polygon (via a bridge).
 
 <Process>
 
-Maecenas ac diam efficitur, fermentum risus eu, faucibus ex.
+Setup Your Wallet
 
-Integer finibus condimentum tortor, nec volutpat libero aliquet a. 
+Add Ether cryptocurrency to your wallet
 
-Nullam venenatis urna viverra massa lobortis, a sagittis quam mattis. 
+Publish your data asset on Ocean Market
 
-Maecenas ac diam efficitur, fermentum risus eu, faucibus ex.
+Connect your account
 
-Integer finibus condimentum tortor, nec volutpat libero aliquet a. 
+Enter your dataset information into the publish form
 
-Nullam venenatis urna viverra massa lobortis, a sagittis quam mattis. 
+Sign the transactions & publish your dataset 
+
+Decide on pricing type
+
+Create pricing for a data set
 
 </Process>
 
-## How does data consumption work in Ocean Protocol?
-
-Mauris quis sem nec mauris iaculis ultrices. Sed ac nibh id sapien dignissim laoreet. Maecenas finibus vitae dui id posuere. Suspendisse aliquet nisl a turpis.
-
-> "Phasellus in risus in ex ultrices imperdiet. Quisque faucibus ultrices mollis. Curabitur rutrum augue tortor. Nunc egestas lacinia felis in auctor. Praesent accumsan lacus leo, in viverra libero luctus ut. Integer dolor mauris, convallis et dapibus pulvinar, luctus nec risus. Mauris maximus eros et eros varius luctus."
-
 ### Fixed rate exchange
 
-> "The earliest stamp seals found were used in Iran in 5,000 B.C. Later on, archaeologists can 
-use both the trade in seals themselves, as well as the distances between seals and the corresponding sealings, to trace long-distance trade networks."
-
-It is a critical and underappreciated point:
-
-> 💡 "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-
-
-This is still true today, and provides some neat context for why a shared, global, ownerless, borderless means of recording history is so vital and interesting a development.
+Fixed pricing is fairly self-explanatory — you set the price and that’s what customers pay to access your data. You can change the price at any time and customers will always have to pay the amount that you set.
 
 ### Dynamic Pricing 
 
+Dynamic pricing is a little more complicated as the price is determined by an automated version of an order book. This concept is called an Automated Market Marker (AMM). Under the hood, Ocean uses the Balancer AMM.
+
+If you would like to create dynamic pricing you will need to purchase Ocean tokens so that you can provide liquidity to the AMM pool. The price that the customer pays is set by the ratio of Ocean tokens to datatokens within the pool. As more people purchase the datatokens, the ratio changes and the price increases. If you remove Ocean tokens from the pool the ratio changes in the other direction and the datatoken price goes down.
+
+Anyone can add liquidity to the pool you have created — they are known as liquidity providers. Liquidity providers earn a share of the transaction fees when the datatoken is purchased.
 
 
-Nulla facilisi. Integer interdum cursus dui vitae placerat. Suspendisse et erat eget magna porttitor efficitur. Nunc condimentum purus sit amet semper cursus. Nulla porttitor, diam at mollis mattis, nulla nulla eleifend magna, interdum accumsan dolor neque ut ipsum. Mauris congue risus a neque faucibus dignissim quis at felis. Curabitur sit amet sollicitudin justo. Suspendisse erat mauris, ultrices et varius ac, porttitor a elit. Nunc fringilla laoreet velit. Pellentesque a rutrum ipsum. Phasellus maximus eros tempor euismod varius.
+## How does data consumption work in Ocean Protocol?
 
-Quisque eu laoreet sem, in vehicula quam. Sed tincidunt porttitor nisi, feugiat dignissim nunc ullamcorper sed. Cras sed egestas leo. Maecenas a sapien.
+- Go to Ocean Marketplace https://market.oceanprotocol.com/
+- Search for the data asset. The Ocean Marketplace provides features to search the Data/Algorithms by text, and users can also sort the result by published date.
+- Below image shows how to buy a Data asset with static content.
