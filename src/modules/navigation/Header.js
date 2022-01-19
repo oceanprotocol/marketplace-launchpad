@@ -136,6 +136,16 @@ const HeaderNav = ({headerLinks, hideMenu}) => {
         </Link>
 
         <Link
+          to={'/enterprise'}
+          hideExternalIcon
+          sx={{
+            fontWeight: 'normal',
+            flexShrink: 0
+          }}>
+          {t('Enterprise')}
+        </Link>
+
+        <Link
           to={'/learn/faq'}
           hideExternalIcon
           sx={{
