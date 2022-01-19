@@ -1,0 +1,55 @@
+---
+title: Step by step deployment guides
+order: 1
+hideLanguageSelector: true
+description: A connected world in which anyone can communicate anything from anywhere requires more dynamic and responsive means of governing ourselves. Though it seems complex, Lao Tzu already had all the answers 27 centuries ago.
+featuredImage: images/shares/govern.png
+---
+
+# Step by step deployment guides
+
+## How to build and deploy the market
+
+Every branch or Pull Request is automatically deployed to multiple hosts for redundancy and emergency reasons:
+
+- Netlify
+- Vercel
+- S3
+- A link to a preview deployment will appear under each Pull Request.
+
+The latest deployment of the main branch is automatically aliased to market.oceanprotocol.com, where the deployment on Netlify is the current live deployment.
+
+To create a production build, run from the root of the project:
+
+```
+npm run build
+# serve production build
+npm run serve
+```
+
+## How to build and deploy backend components
+
+If you want to index multiple chains using a single Aquarius instance, that is possible. The OCEAN version of Aquarius uses this exact flow. To enable multi-chain indexing, these are the necessary steps:
+
+- Run one or more pods, with RUN_AQUARIUS_SERVER=1 , RUN_EVENTS_MONITOR=0 and EVENTS_ALLOW=0. This basically enables only the API part of Aquarius.
+- For each chain, start a pod with the following env variables:
+- Set RUN_EVENTS_MONITOR=1 and RUN_AQUARIUS_SERVER=0 (run only the EventsMonitor part of Aquarius)
+- Set coresponding EVENTS_RPC, NETWORK_NAME, BLOCKS_CHUNK_SIZE, METADATA_CONTRACT_BLOCK, METADATA_CONTRACT_ADDRESS etc.
+
+A list of deployment values and schematics [can be found here](https://github.com/oceanprotocol/aquarius/tree/main/deployment)
+
+Voilà! You are now running a multi-chain Aquarius.
+
+```bash
+git clone git@github.com:oceanprotocol/provider.git
+cd provider/
+
+python3 -m venv venv
+source venv/bin/activate
+
+pip install -r requirements_dev.txt
+cp .env.example .env
+
+flask run --port=8030
+
+```

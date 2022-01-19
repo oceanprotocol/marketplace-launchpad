@@ -42,280 +42,119 @@ exports.createPages = async ({graphql, actions}) => {
     });
   });
 
-  //Legacy Redirect Fix
   createRedirect({
-    fromPath: '/module-0/',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-0`
+    fromPath: '/level-2/',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-2`
   });
 
   createRedirect({
-    fromPath: '/module-0/conversation',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-0/conversation`
+    fromPath: '/level-2/module-1/',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-1`
   });
 
   createRedirect({
-    fromPath: '/module-0/money-language',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-0/money-language`
+    fromPath: '/level-2/module-1/introduction',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-1/introduction`
   });
 
   createRedirect({
-    fromPath: '/module-0/play-of-pattern',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-0/play-of-pattern`
+    fromPath: '/module-1/user-flows',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-1/user-flows`
   });
 
   createRedirect({
-    fromPath: '/module-0/purpose',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-0/purpose`
+    fromPath: '/level-2/module-1/core-concepts',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-1/core-concepts`
   });
 
   createRedirect({
-    fromPath: '/module-0/trust',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-0/trust`
+    fromPath: '/level-2/module-2/',
+    toPath: `/${FALLBACK_LOCALE}/level-2/learn/module-2`
   });
 
   createRedirect({
-    fromPath: '/module-1/',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-1`
+    fromPath: '/level-2/module-2/forking-ocean-market',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-2/forking-ocean-market`
   });
 
   createRedirect({
-    fromPath: '/module-1/joyful-subversion',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-1/joyful-subversion`
+    fromPath: '/level-2/module-2/customising-market',
+    toPath: `/${FALLBACK_LOCALE}/learn/module-2/customising-market`
   });
 
   createRedirect({
-    fromPath: '/module-1/meaning',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-1/meaning`
+    fromPath: '/level-2/module-2/deploying-market',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-2/deploying-market`
   });
 
   createRedirect({
-    fromPath: '/module-1/playdough-protocols',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-1/playdough-protocols`
+    fromPath: '/level-2/module-3/',
+    toPath: `/${FALLBACK_LOCALE}/level-2/learn/module-3`
   });
 
   createRedirect({
-    fromPath: '/module-1/promise-blockchains',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-1/promise-blockchains`
+    fromPath: '/level-2/module-3/backend-overview',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-3/backend-overview`
   });
 
   createRedirect({
-    fromPath: '/module-1/understanding-ethereum',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-1/understanding-ethereum`
+    fromPath: '/level-2/module-3/ocean-provider',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-3/ocean-provider`
   });
 
   createRedirect({
-    fromPath: '/module-1/value',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-1/value`
+    fromPath: '/level-2/module-3/ocean-aquarius',
+    toPath: `/${FALLBACK_LOCALE}/learn/module-3/level-2/ocean-aquarius`
   });
 
   createRedirect({
-    fromPath: '/module-2/',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-2`
+    fromPath: '/level-2/module-4/',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-4`
   });
 
   createRedirect({
-    fromPath: '/module-2/banking',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-2/banking`
+    fromPath: '/level-2/module-4/deployment-guides',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-4/deployment-guides`
   });
 
   createRedirect({
-    fromPath: '/module-2/better-questions',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-2/better-questions`
+    fromPath: '/level-2/module-4/devops-challenges',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-4/devops-challenges`
   });
 
   createRedirect({
-    fromPath: '/module-2/debt',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-2/debt`
+    fromPath: '/level-3/',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-3`
   });
 
   createRedirect({
-    fromPath: '/module-2/engineering',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-2/engineering`
+    fromPath: '/level-3/module-5',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-3/module-5`
   });
 
   createRedirect({
-    fromPath: '/module-2/money-speech',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-2/money-speech`
+    fromPath: '/level-3/module-6',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-3/module-6`
   });
 
   createRedirect({
-    fromPath: '/module-2/shelling-out',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-2/shelling-out`
+    fromPath: '/level-3/module-7',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-3/module-7`
   });
 
   createRedirect({
-    fromPath: '/module-3/',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-3`
+    fromPath: '/level-3/module-8',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-3/module-8`
   });
 
   createRedirect({
-    fromPath: '/module-3/freedom',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-3/freedom`
+    fromPath: '/level-5/',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-5`
   });
 
   createRedirect({
-    fromPath: '/module-3/humility',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-3/humility`
-  });
-
-  createRedirect({
-    fromPath: '/module-3/intention',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-3/intention`
-  });
-
-  createRedirect({
-    fromPath: '/module-3/lock-it-open',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-3/lock-it-open`
-  });
-
-  createRedirect({
-    fromPath: '/module-3/time',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-3/time`
-  });
-
-  createRedirect({
-    fromPath: '/module-3/remember',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-3/remember`
-  });
-
-  createRedirect({
-    fromPath: '/module-4/',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-4`
-  });
-
-  createRedirect({
-    fromPath: '/module-4/art',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-4/art`
-  });
-
-  createRedirect({
-    fromPath: '/module-4/consensus',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-4/consensus`
-  });
-
-  createRedirect({
-    fromPath: '/module-4/liberal-radical',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-4/liberal-radical`
-  });
-
-  createRedirect({
-    fromPath: '/module-4/self-enquiry',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-4/self-enquiry`
-  });
-
-  createRedirect({
-    fromPath: '/module-4/governance',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-4/governance`
-  });
-
-  createRedirect({
-    fromPath: '/module-4/the-garden',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-4/the-garden`
-  });
-
-  createRedirect({
-    fromPath: '/module-5/',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-5`
-  });
-
-  createRedirect({
-    fromPath: '/module-5/amazon-unbounded-search',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-5/amazon-unbounded-search`
-  });
-
-  createRedirect({
-    fromPath: '/module-5/incentives',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-5/incentives`
-  });
-
-  createRedirect({
-    fromPath: '/module-5/listening-stories',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-5/listening-stories`
-  });
-
-  createRedirect({
-    fromPath: '/module-5/prosocial-value',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-5/prosocial-value`
-  });
-
-  createRedirect({
-    fromPath: '/module-5/reveal-the-universe',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-5/reveal-the-universe`
-  });
-
-  createRedirect({
-    fromPath: '/module-5/the-peoples-narrative',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-5/the-peoples-narrative`
-  });
-
-  createRedirect({
-    fromPath: '/module-6/',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-6`
-  });
-
-  createRedirect({
-    fromPath: '/module-6/censorship-resistance',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-6/censorship-resistance`
-  });
-
-  createRedirect({
-    fromPath: '/module-6/duende',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-6/duende`
-  });
-
-  createRedirect({
-    fromPath: '/module-6/inventing-on-principle',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-6/inventing-on-principle`
-  });
-
-  createRedirect({
-    fromPath: '/module-6/learn',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-6/learn`
-  });
-
-  createRedirect({
-    fromPath: '/module-6/serenity',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-6/serenity`
-  });
-
-  createRedirect({
-    fromPath: '/module-7/',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-7`
-  });
-
-  createRedirect({
-    fromPath: '/module-7/giving',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-7/giving`
-  });
-
-  createRedirect({
-    fromPath: '/module-7/no-paradigm',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-7/no-paradigm`
-  });
-
-  createRedirect({
-    fromPath: '/module-7/perfection',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-7/perfection`
-  });
-
-  createRedirect({
-    fromPath: '/module-7/scale-ability',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-7/scale-ability`
-  });
-
-  createRedirect({
-    fromPath: '/module-7/the-gift',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-7/the-gift`
-  });
-
-  createRedirect({
-    fromPath: '/en/fork-me/learning-curve',
-    toPath: `/${FALLBACK_LOCALE}/guiding/contracts`
-  });
-
-  createRedirect({
-    fromPath: '/en/resources/nfts',
-    toPath: `/${FALLBACK_LOCALE}/resources/culture`
+    fromPath: '/level-6/',
+    toPath: `/${FALLBACK_LOCALE}/learn/level-6`
   });
 };
 
@@ -326,12 +165,6 @@ exports.onCreatePage = async ({page, actions}) => {
   const {context: oldPageContext} = page;
 
   //NOTE(Rejon): Pass a regex string variable for blog home pages so we can make sure we're getting the correct locale.
-  if (
-    page.path.includes('/blog/') &&
-    !page.componentPath.includes('/blogPosts/')
-  ) {
-    oldPageContext.regex = `//blogPosts/${page.path.split('/')[1]}/`; //ie. /blogPosts/en
-  }
 
   deletePage(page);
   createPage({

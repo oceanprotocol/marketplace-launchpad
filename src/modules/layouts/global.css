@@ -1,4 +1,34 @@
 /* Font Loading */
+@font-face {
+    font-family: 'Sharp Sans Display';
+    src: url('./fonts/SharpSansDispNo1-Bold.woff2') format('woff2'),
+      url('./fonts/SharpSansDispNo1-Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Sharp Sans';
+    src: url('./fonts/SharpSans-Medium.woff2') format('woff2'),
+      url('./fonts/SharpSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Sharp Sans';
+    src: url('./fonts/SharpSans-Bold.woff2') format('woff2'),
+      url('./fonts/SharpSans-Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+  }
+  
 body {
     backface-visibility: hidden;
 }

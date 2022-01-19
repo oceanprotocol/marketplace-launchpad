@@ -1,0 +1,29 @@
+.waves,
+.waves svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.waves {
+  z-index: -1;
+  overflow: hidden;
+  /* Safari fix for waves affecting other paint layers for whatever reason */
+  transform: translate3d(0, 0, 0);
+}
+
+.waves svg {
+  top: auto;
+  bottom: -4rem;
+  /* transition: opacity 0.3s ease-out; */
+  transform: scaleX(1.2) rotate(-8deg);
+  height: 450px;
+}
+
+@media (min-width: 30rem) {
+  .waves svg {
+    bottom: 1rem;
+  }
+}

@@ -68,7 +68,7 @@ const PageLayout = ({children, seoTitle, t}) => (
         display: 'inline-block',
         order: [0, 0, 1]
       }}
-      src={'/images/kernel_lp.png'}
+      src={'/images/creatures/seahorse/seahorse-full-light.svg'}
     />
   </Flex>
 );

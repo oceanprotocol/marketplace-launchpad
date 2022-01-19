@@ -1,7 +1,5 @@
 /** @jsx jsx */
 import {Icon} from '@makerdao/dai-ui-icons';
-import {Authors} from '@modules/authors';
-import {BlogHome} from '@modules/blog';
 import {Link} from '@modules/navigation/';
 import {
   Accordion,
@@ -88,11 +86,9 @@ const Custom_Components = {
   Column,
   Video,
   Sound,
-  Authors,
   motionDiv: motion.div,
   motionUL: motion.ul,
   motionLI: motion.li,
-  BlogHome,
   Flash,
   Card
 };

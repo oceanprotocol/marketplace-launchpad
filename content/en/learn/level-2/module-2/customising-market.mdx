@@ -1,0 +1,96 @@
+---
+title: Customising your fork of Ocean market
+order: 2
+hideLanguageSelector: true
+description: Step by step guide to customising your fork of Ocean market
+featuredImage: images/shares/money-speech.png
+---
+
+# Customising your fork of Ocean market
+
+So you’ve got a fully functioning data marketplace at this point, which is pretty cool. But it doesn’t really look like your data marketplace. Right now it’s still just a clone of Ocean Market — same branding, name, logo etc. The next few steps focus on personalising your data marketplace.
+
+<Process>
+
+Change your Market Name
+
+Change the Logo
+
+Change the Styling
+
+Change the Fee Address
+
+Build and host your Data Marketplace
+
+</Process>
+
+## Change your Market Name
+
+It’s now time to open up your favourite code editor and start getting stuck into the code. The first thing we will be doing is changing the name of your data marketplace. A decent code editor (such as VS Code) makes this incredibly simple by searching and replacing all the places that the name appears.
+
+Let’s start by searching and replacing “Ocean Marketplace”. In VS Code there is a magnifying glass symbol in the left-hand panel (arrow 1 in the image below) that will open up the interface for searching and replacing text. Type “Ocean Marketplace” into the first textbox, and the name of your marketplace into the second textbox (arrow 2). To make things simple, there is a button to the right of the second textbox (arrow 3) that will replace all instances at once. You can take a moment to review all the text you’re changing if you wish and then click this button.
+
+It’s now time to open up your favourite code editor and start getting stuck into the code. The first thing we will be doing is changing the name of your data marketplace. A decent code editor (such as VS Code) makes this incredibly simple by searching and replacing all the places that the name appears.
+
+Let’s start by searching and replacing “Ocean Marketplace”. In VS Code there is a magnifying glass symbol in the left-hand panel (arrow 1 in the image below) that will open up the interface for searching and replacing text. Type “Ocean Marketplace” into the first textbox, and the name of your marketplace into the second textbox (arrow 2). To make things simple, there is a button to the right of the second textbox (arrow 3) that will replace all instances at once. You can take a moment to review all the text you’re changing if you wish and then click this button.
+
+
+
+## Change the Logo
+
+The next important step to personalising your data marketplace is setting your own logo, we highly recommend using your logo in SVG format for this. The site logo is stored in the following location:
+
+```
+src/images/logo.svg
+```
+
+Delete the “logo.svg” file from that folder and paste your own logo in the same folder. If you rename your logo “logo.svg” everything will work without any problems.
+
+At this point, it’s a good idea to check how things are looking. First, check that you have saved all of your changes, then cancel the build that’s running in your terminal (Ctrl + C or Cmnd + C) and start it again `npm start`. Once the build has finished, navigate to http://localhost:8000/ and see how things look.
+
+## Change the Styling
+
+Hopefully, you like our pink and purple branding but we don’t expect you to keep it in your own data marketplace. This step focuses on applying your own brand colours and styles.
+
+### Background
+
+Let’s start with the background. Open up the following CSS file:
+
+```
+src/components/App.module.css
+```
+
+You’ll notice in the screenshot above that we are setting our “wave” background on line 3. Here, you’ll want to use your own background colour or image. For this example, we’ll use an SVG background from svgbackgrounds.com. We save the new background image into the src/images/ folder (same folder as the logo), then we change the CSS to the file location of the new background (see line 3 in the image below).
+
+
+## Brand Colours
+
+Next up, let’s change the background colours to match your individual style. Open up the following file: src/global/_variables.css. Here you’ll see the global style colours that are set. Now is the time to get creative, or consult your brand handbook (if you already have one).
+
+You can change these colours as much as you wish until you’re happy with how everything looks. Each time you save your changes, the site will immediately update so you can see how things look. You can see the styles chosen for this example in the image below.
+
+## Change Fonts
+
+The final part of the styling that we’ll alter in this guide is the fonts. This is an important step because the font used in Ocean Market is one of the few elements of the market that are copyright protected, if you want to use the same font you’ll need to purchase a license. The other copyrighted elements are the logo and the name — which we have already changed.
+
+If you don’t already have a brand font, head over to Google Fonts to pick some fonts that suit the brand you’re trying to create. Google makes it nice and easy to see how they’ll look and it’s simple to import them into your project.
+
+The global fonts are set in the same file as the colours, scroll down and you’ll see them on lines 36 to 41.
+
+
+## Change the Fee Address
+
+At this point, we have made a lot of changes and hopefully you’re happy with the way that your data marketplace is looking. Given that you now have your own awesome data marketplace, it’s about time we talked about monetizing it. Yeah, that’s right — you will earn a commission when people buy and sell data assets on your marketplace.
+
+When someone sets the pricing for their data assets in your marketplace they are informed that a commission will be sent to the owner of the data marketplace. In order to receive this commission, you need to set the market to send the commission through to your Ethereum address.
+
+This important step is the last thing that we will change in this guide. To change the address that the marketplace fees are sent to you need to set your address as an environmental variable. Create a new file called .env in the root of your repository. It is important that the file is saved in the right place, your file structure should look the same as below.
+
+<Process>
+
+Now copy and paste the following into the file: `GATSBY_MARKET_FEE_ADDRESS=”0xxx”`
+
+You need to replace “0xxx” with your Ethereum address and save the file. And that’s it, you now have a fully functioning data marketplace that will earn you revenue every time someone uses it.
+
+</Process>
+

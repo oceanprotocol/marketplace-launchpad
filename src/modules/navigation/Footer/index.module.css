@@ -1,0 +1,57 @@
+.footer {
+  margin-top: calc(var(--spacer) * 3);
+  
+  /* padding: calc(var(--spacer) * 2) 0; */
+  font-size: var(--font-size-small);
+  position: relative;
+  background: url('../../../../node_modules/@oceanprotocol/art/creatures/mantaray/mantaray-grid.svg')
+    no-repeat right top;
+  background-size: 200px;
+  background-position: right !important;
+}
+
+@media (min-width: 40rem) {
+  .footer {
+    background-size: 250px;
+    background-position: -5% 65%;
+  }
+}
+
+@media (min-width: 90rem) {
+  .footer {
+    background-position: left 65%;
+  }
+}
+
+@media (min-width: 110rem) {
+  .footer {
+    background-position: 5% 65%;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: calc(var(--spacer) * 2);
+}
+
+@media (min-width: 40rem) {
+  .grid {
+    grid-template-columns: 3fr 9fr;
+  }
+}
+
+.title {
+  font-size: var(--font-size-base);
+  color: var(--brand-grey-light);
+  margin-bottom: calc(var(--spacer) / 2);
+  text-transform: uppercase;
+}
+
+.waves {
+  top: -300px;
+}
+
+.waves svg {
+  top: 0;
+  bottom: auto;
+}
