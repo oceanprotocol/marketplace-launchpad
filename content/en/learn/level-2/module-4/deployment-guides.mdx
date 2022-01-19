@@ -10,27 +10,35 @@ featuredImage: images/shares/govern.png
 
 ## How to build and deploy the market
 
-Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque gravida tincidunt felis, non consequat sapien consectetur non. 
+Every branch or Pull Request is automatically deployed to multiple hosts for redundancy and emergency reasons:
 
-Suspendisse malesuada aliquet turpis sit amet sodales. Proin nec nisi lacinia, egestas nisi et, dignissim justo. Cras fringilla bibendum nunc, at euismod est dictum eget. Sed imperdiet, est id congue faucibus, velit nulla tincidunt mauris, at tincidunt magna quam ut quam. Ut eget neque et turpis vulputate commodo. Mauris volutpat est eu consequat vulputate. Nulla posuere aliquet mauris vel mattis.
+- Netlify
+- Vercel
+- S3
+- A link to a preview deployment will appear under each Pull Request.
 
-Aenean nulla nibh, tristique ac mollis quis, porta eu sem. Duis et metus ac mi bibendum facilisis a id leo. Nullam.
+The latest deployment of the main branch is automatically aliased to market.oceanprotocol.com, where the deployment on Netlify is the current live deployment.
 
-```bash
-git clone git@github.com:oceanprotocol/barge.git
-cd barge
+To create a production build, run from the root of the project:
 
-./start_ocean.sh
 ```
-
+npm run build
+# serve production build
+npm run serve
+```
 
 ## How to build and deploy backend components
 
-Duis ac purus ullamcorper, convallis ex ut, pretium ligula. Vestibulum tincidunt ac nisi sed venenatis. Phasellus sed porttitor nisl, eu gravida ipsum. 
+If you want to index multiple chains using a single Aquarius instance, that is possible. The OCEAN version of Aquarius uses this exact flow. To enable multi-chain indexing, these are the necessary steps:
 
-Proin imperdiet ligula eu consectetur posuere. Sed eu lectus dictum, tincidunt mi eget, molestie libero. Integer imperdiet lorem ligula, at congue elit malesuada non. Etiam dignissim elit sem, at posuere velit ullamcorper a. In quis ex ut lacus tincidunt tincidunt. Vivamus ante ante, malesuada vel vehicula vel, consequat at quam. Sed ac ultrices sapien, id cursus nulla. 
+- Run one or more pods, with RUN_AQUARIUS_SERVER=1 , RUN_EVENTS_MONITOR=0 and EVENTS_ALLOW=0. This basically enables only the API part of Aquarius.
+- For each chain, start a pod with the following env variables:
+- Set RUN_EVENTS_MONITOR=1 and RUN_AQUARIUS_SERVER=0 (run only the EventsMonitor part of Aquarius)
+- Set coresponding EVENTS_RPC, NETWORK_NAME, BLOCKS_CHUNK_SIZE, METADATA_CONTRACT_BLOCK, METADATA_CONTRACT_ADDRESS etc.
 
-Suspendisse in laoreet dolor. Sed at metus tellus. Pellentesque sit amet mollis metus. Sed lacinia tristique massa, at fringilla lorem lacinia.
+A list of deployment values and schematics [can be found here](https://github.com/oceanprotocol/aquarius/tree/main/deployment)
+
+Voilà! You are now running a multi-chain Aquarius.
 
 ```bash
 git clone git@github.com:oceanprotocol/provider.git

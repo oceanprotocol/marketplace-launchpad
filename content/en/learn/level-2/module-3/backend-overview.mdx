@@ -6,24 +6,56 @@ description: Aenean nulla nibh, tristique ac mollis quis, porta eu sem. Duis et 
 featuredImage: images/shares/intention.png
 ---
 
-# Backend overview
-
-Nunc feugiat tincidunt nunc, at vestibulum ligula tristique ut. Fusce a faucibus diam. Duis a euismod nisi. Ut a tristique ante, a placerat diam. Morbi sit amet auctor nunc. Aliquam a libero nulla. Maecenas eget justo id massa gravida blandit.
-
-Nullam rutrum erat non scelerisque aliquet. Fusce risus tortor, lobortis id dolor sit amet, vestibulum tincidunt diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ornare iaculis justo eget dictum. Nam ac sem vel eros vestibulum elementum in eleifend risus. Aenean porta eros massa, eget porta ante pulvinar a. Nulla vel risus semper, consequat.
-
-<Video src="https://www.youtube.com/embed/-smidDpSrOY" />
+# Overview of Ocean Backend Components
 
 ---
 
+## Ocean Metadata Storage (aka: Aquarius)
 
-## Overview of Ocean backend components
+### What it does: 
+- Stores metadata for Ocean Protocol Assets
+- Decentralized, reads metadata events from blockchain and caches them
+- All aquarius instances will contain the same data -> load balancing, fail over
 
-Praesent vitae consectetur dui. Ut lacinia massa erat, sed placerat turpis venenatis non. 
+### Technology used: 
 
-Fusce eros turpis, vehicula eget aliquet ac, tempor ac arcu. Nullam sodales turpis id enim iaculis fermentum. Mauris ac faucibus magna. Nulla at diam ac sem ornare fringilla finibus a sapien. Donec scelerisque sit amet quam mollis venenatis. Morbi sed eros lacus. Duis vehicula sed diam nec condimentum. Vestibulum at felis a justo facilisis malesuada nec nec sapien. Integer ac elit consequat urna pharetra pulvinar. Aliquam in ex massa. 
+Python Flask HTTP server + Elastic Search
 
-Curabitur bibendum ultricies massa iaculis posuere. Etiam tincidunt blandit nisi vel posuere. Donec et massa et est semper.
+---
+
+## Ocean Proxy (Provider)
+
+### What it does: 
+- The only component that should access your data
+- Performs checks on chain for buyer permissions and payments
+- Encrypts URL during publish
+- Decrypts URL during consume
+- Provides access to data assets by streaming data (and never the URL)
+- Provides compute services (connects to C2D environment) 
+- Typically run by Data Provider
+
+### Technology used: 
+Python Flask HTTP server
+
+---
+## Libraries   (Ocean.js, Ocean.py) 
+
+### What it does: 
+- Connect all components together
+- Facilitate publish/register and consume/purchase flows (only a few lines of code)
+
+Ocean libraries comes in two flavours:
+- Ocean.js
+- Ocean.py
+
+You can also have your own implementation of Ocean library (e.g. ocean.go)
+
+### Technology used: 
+
+Javascript, Python
+
+---
+
 
 ## Introduction on using an RPC
 
