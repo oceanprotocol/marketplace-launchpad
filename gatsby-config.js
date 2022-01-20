@@ -28,6 +28,16 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
     {
+      resolve: `gatsby-source-git`,
+      options: {
+        name: `docs-repo`,
+        remote: `https://github.com/oceanprotocol/docs.git`,
+        branch: `main`,
+        // Only import the content folder from a codebase.
+        patterns: `content/**`
+      }
+    },
+    {
       //NOTE(Rejon): This is what allows us to do aliased imports like "@modules/ect..."
       resolve: `gatsby-plugin-alias-imports`,
       options: {
