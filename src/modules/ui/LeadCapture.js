@@ -20,7 +20,7 @@ const LeadCapture = ({children, ...otherProps}) => (
       px: '24px',
       py: '28px',
       mb: '24px',
-      mt: '24px',
+      mt: '5',
       width: '85%',
       borderRadius: '12px',
       bg: 'primaryMuted'
