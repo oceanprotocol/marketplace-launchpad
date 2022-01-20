@@ -1,17 +1,5 @@
 /** @jsx jsx */
-import {
-  jsx,
-  Label,
-  Input,
-  Select,
-  Textarea,
-  Radio,
-  Checkbox,
-  Slider,
-  Box,
-  Flex,
-  Button
-} from 'theme-ui';
+import {jsx, Label, Input, Box, Button} from 'theme-ui';
 
 const LeadCapture = ({children, ...otherProps}) => (
   <Box
