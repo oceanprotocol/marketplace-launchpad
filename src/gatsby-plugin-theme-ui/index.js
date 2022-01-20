@@ -237,15 +237,6 @@ export default {
     onPrimary: '#fafafa',
     onSecondary: '#212144',
     lemon: '#F3FF64',
-    flashCard: '#212145',
-    flashText: '#fff',
-    flashCorrectBG: '#00EC9F',
-    flashWarningBG: '#FFBA44',
-    flashCardAnswerBG: '#817e92',
-    testimonialCardSlack: '#fafafa',
-    testimonialCardSlackText: '#757087',
-    testimonialCardTwitter: '#212144',
-    testimonialCardTwitterText: '#ffffff',
     modes: {
       // dark: {
       //   testimonialCardSlack: '#fafafa',
