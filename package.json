@@ -81,11 +81,10 @@
   ],
   "license": "Apache-2.0",
   "scripts": {
-    "build": "npm run acrollout && gatsby build",
-    "acrollout": "node scripts/allcontributors-transformer.js",
+    "build": "gatsby build",
     "lint": "eslint --fix '**/*.{js,jsx}'",
     "format": "prettier --no-bracket-spacing --trailing-comma none --single-quote --jsx-bracket-same-line --write ./src",
-    "start": "npm run acrollout && gatsby develop",
+    "start": "gatsby develop",
     "precom-lint": "lint-staged",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
