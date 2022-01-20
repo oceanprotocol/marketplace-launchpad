@@ -23,7 +23,7 @@ const LeadCapture = ({children, ...otherProps}) => (
         width: '70%',
         mb: '3',
         mr: '3',
-        borderColor: 'primaryAlt',
+        borderColor: 'secondaryMuted',
         display: 'inline-block',
         bg: 'white'
       }}
