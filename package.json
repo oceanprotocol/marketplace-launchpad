@@ -84,7 +84,7 @@
     "build": "gatsby build",
     "lint": "eslint --fix '**/*.{js,jsx}'",
     "format": "prettier --no-bracket-spacing --trailing-comma none --single-quote --jsx-bracket-same-line --write ./src",
-    "start": "gatsby develop",
+    "start": "scripts/import-exterrnal-files.sh && gatsby develop",
     "precom-lint": "lint-staged",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
