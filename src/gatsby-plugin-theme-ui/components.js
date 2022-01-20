@@ -15,7 +15,8 @@ import {
   Process,
   StatusBanner,
   Table,
-  Tout
+  Tout,
+  LeadCapture
 } from '@modules/ui/';
 import {Aligner, Indent, Video, Sound} from '@modules/utility/';
 import {motion} from 'framer-motion';
@@ -86,7 +87,8 @@ const Custom_Components = {
   Sound,
   motionDiv: motion.div,
   motionUL: motion.ul,
-  motionLI: motion.li
+  motionLI: motion.li,
+  LeadCapture
 };
 
 export default {
