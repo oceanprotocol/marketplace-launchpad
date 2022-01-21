@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 import * as styles from './Address.module.css'
 // import { useConsent } from '../../../hooks/useConsent'
 import Logo from '@oceanprotocol/art/logo/logo.svg'
-import * as logoStyles from '../../../atoms/Logo.module.css'
+import * as logoStyles from '../../atoms/Logo.module.css'
 
 export default function Address() {
   // const { company } = useSiteMetadata()
