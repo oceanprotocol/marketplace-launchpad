@@ -102,9 +102,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kernel-community/kernel-v2"
+    "url": "https://github.com/oceanprotocol/marketplace-launchpad"
   },
   "bugs": {
-    "url": "https://github.com/kernel-community/kernel-v2/issues"
+    "url": "https://github.com/oceanprotocol/marketplace-launchpad/issues"
   }
 }
