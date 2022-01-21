@@ -6,7 +6,7 @@ import {useForm, ValidationError} from '@formspree/react';
 const LeadCapture = ({children, ...otherProps}) => {
   const [state, handleSubmit] = useForm('mjvlgalg');
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    return <p>Thanks for your interest! We'll be in touch soon.</p>;
   }
 
   return (
