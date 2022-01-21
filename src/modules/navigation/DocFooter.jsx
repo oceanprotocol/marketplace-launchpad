@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ReactComponent as Pencil } from '../images/pencil.svg'
-import styles from './DocFooter.module.scss'
-import { social, githubContentPath } from '../../config'
+import { ReactComponent as Pencil } from '../../../static/images/icons/pencil.svg'
+// import styles from './DocFooter.module.scss'
+import { social, githubContentPath } from '../../../config'
 
 export default function DocFooter({ post, url, externalName }) {
   if (post) {
@@ -10,12 +10,12 @@ export default function DocFooter({ post, url, externalName }) {
   }
 
   return (
-    <footer className={styles.footer}>
+    <footer >
       <a href={social.Discord}>✋ Ask a question on Discord</a>
-      <a href={url} className={post && !post.html ? styles.active : null}>
+      <a href={url} >
         <Pencil /> Edit this page on GitHub
         {externalName && (
-          <span className={styles.externalRepoName}>{externalName}</span>
+          <span >{externalName}</span>
         )}
       </a>
     </footer>

@@ -6,7 +6,7 @@ import isNil from 'lodash/isNil';
 import {useStaticQuery, graphql} from 'gatsby';
 import {useLocation} from '@reach/router';
 
-import {MobileNav} from '@modules/navigation';
+import {MobileNav, DocFooter} from '@modules/navigation';
 import {useTranslation} from '@modules/localization/';
 import {LanguageSelector} from '@modules/localization';
 import {Sidenav, Breadcrumbs, TableOfContents} from '@modules/navigation';
@@ -252,6 +252,7 @@ export default (props) => {
         )}
       </Box>
       <MobileNav sidenavData={sidenavData} />
+      <DocFooter />
     </Fragment>
   );
 };
