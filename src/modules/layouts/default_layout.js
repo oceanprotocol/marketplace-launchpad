@@ -6,10 +6,15 @@ import isNil from 'lodash/isNil';
 import {useStaticQuery, graphql} from 'gatsby';
 import {useLocation} from '@reach/router';
 
-import {MobileNav, DocFooter} from '@modules/navigation';
+import {MobileNav} from '@modules/navigation';
 import {useTranslation} from '@modules/localization/';
 import {LanguageSelector} from '@modules/localization';
-import {Sidenav, Breadcrumbs, TableOfContents} from '@modules/navigation';
+import {
+  Sidenav,
+  Breadcrumbs,
+  TableOfContents,
+  DocFooter
+} from '@modules/navigation';
 import {StatusBanner} from '@modules/ui';
 import calculateTreeData from '@modules/navigation/calculateTreeData';
 import {SEO} from '@modules/utility';
@@ -233,6 +238,7 @@ export default (props) => {
         <Box>{children}</Box>
 
         <Pager sidenavData={sidenavData} pagePath={pagePath} />
+        <DocFooter />
       </Box>
 
       <Box sx={{position: 'relative'}}>
@@ -252,7 +258,6 @@ export default (props) => {
         )}
       </Box>
       <MobileNav sidenavData={sidenavData} />
-      <DocFooter />
     </Fragment>
   );
 };
