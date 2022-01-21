@@ -9,7 +9,7 @@ assignees: ''
 
 ## Description
 
-Short 1-2 sentence project description (Example: Kernel Security is a community-curated list of resources and content to which anyone can contribute. This should be self-maintaining, where anyone can get paid to contribute, with clear guidelines around how to update the resource.)
+Short 1-2 sentence project description.
 
 [Working or Proposed Project Doc](https://hackmd.link)
 

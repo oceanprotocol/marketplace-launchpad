@@ -12,8 +12,8 @@ This repo hosts the code for the Ocean Protocol Marketplace Launchpad learning e
 2. Node v14 or higher (we recommend [nvm](https://github.com/nvm-sh/nvm))
 
 ```
-git clone https://github.com/kernel-community/kernel-v2.git
-cd kernel-v2
+git clone https://github.com/oceanprotocol/marketplace-launchpad.git
+cd marketplace-launchpad
 yarn
 yarn start
 ```
