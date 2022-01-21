@@ -15,5 +15,5 @@ module.exports = {
     Telegram: 'https://t.me/OceanProtocol_Community'
   },
   githubContentPath:
-    'https://github.com/oceanprotocol/marketplace-launchpad/blob/main/content/en'
+    'https://github.com/oceanprotocol/marketplace-launchpad/blob/main/content'
 };
