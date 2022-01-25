@@ -88,7 +88,8 @@
     "precom-lint": "lint-staged",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 0"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 0",
+    "deploy": "surge ./public"
   },
   "pre-commit": [
     "precom-lint"
