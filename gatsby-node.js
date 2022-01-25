@@ -43,6 +43,31 @@ exports.createPages = async ({graphql, actions}) => {
   });
 
   createRedirect({
+    fromPath: '/orientation/',
+    toPath: `/${FALLBACK_LOCALE}/learn/orientation`
+  });
+
+  createRedirect({
+    fromPath: '/orientation/intro-to-web3',
+    toPath: `/${FALLBACK_LOCALE}/learn/orientation/intro-to-web3`
+  });
+
+  createRedirect({
+    fromPath: '/orientation/marketplace-intro',
+    toPath: `/${FALLBACK_LOCALE}/learn/orientation/marketplace-intro`
+  });
+
+  createRedirect({
+    fromPath: '/orientation/mission-statement',
+    toPath: `/${FALLBACK_LOCALE}/learn/orientation/mission-statement`
+  });
+
+  createRedirect({
+    fromPath: '/orientation/wallet-basics',
+    toPath: `/${FALLBACK_LOCALE}/learn/orientation/wallet-basics`
+  });
+
+  createRedirect({
     fromPath: '/quickstart/',
     toPath: `/${FALLBACK_LOCALE}/learn/quickstart`
   });
