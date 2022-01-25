@@ -43,108 +43,133 @@ exports.createPages = async ({graphql, actions}) => {
   });
 
   createRedirect({
-    fromPath: '/level-2/',
-    toPath: `/${FALLBACK_LOCALE}/learn/level-2`
+    fromPath: '/orientation/',
+    toPath: `/${FALLBACK_LOCALE}/learn/orientation`
   });
 
   createRedirect({
-    fromPath: '/level-2/module-1/',
-    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-1`
+    fromPath: '/orientation/intro-to-web3',
+    toPath: `/${FALLBACK_LOCALE}/learn/orientation/intro-to-web3`
   });
 
   createRedirect({
-    fromPath: '/level-2/module-1/introduction',
-    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-1/introduction`
+    fromPath: '/orientation/marketplace-intro',
+    toPath: `/${FALLBACK_LOCALE}/learn/orientation/marketplace-intro`
+  });
+
+  createRedirect({
+    fromPath: '/orientation/mission-statement',
+    toPath: `/${FALLBACK_LOCALE}/learn/orientation/mission-statement`
+  });
+
+  createRedirect({
+    fromPath: '/orientation/wallet-basics',
+    toPath: `/${FALLBACK_LOCALE}/learn/orientation/wallet-basics`
+  });
+
+  createRedirect({
+    fromPath: '/quickstart/',
+    toPath: `/${FALLBACK_LOCALE}/learn/quickstart`
+  });
+
+  createRedirect({
+    fromPath: '/quickstart/module-1/',
+    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-1`
+  });
+
+  createRedirect({
+    fromPath: '/quickstart/module-1/introduction',
+    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-1/introduction`
   });
 
   createRedirect({
     fromPath: '/module-1/user-flows',
-    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-1/user-flows`
+    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-1/user-flows`
   });
 
   createRedirect({
-    fromPath: '/level-2/module-1/core-concepts',
-    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-1/core-concepts`
+    fromPath: '/quickstart/module-1/core-concepts',
+    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-1/core-concepts`
   });
 
   createRedirect({
-    fromPath: '/level-2/module-2/',
-    toPath: `/${FALLBACK_LOCALE}/level-2/learn/module-2`
+    fromPath: '/quickstart/module-2/',
+    toPath: `/${FALLBACK_LOCALE}/quickstart/learn/module-2`
   });
 
   createRedirect({
-    fromPath: '/level-2/module-2/forking-ocean-market',
-    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-2/forking-ocean-market`
+    fromPath: '/quickstart/module-2/forking-ocean-market',
+    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-2/forking-ocean-market`
   });
 
   createRedirect({
-    fromPath: '/level-2/module-2/customising-market',
+    fromPath: '/quickstart/module-2/customising-market',
     toPath: `/${FALLBACK_LOCALE}/learn/module-2/customising-market`
   });
 
   createRedirect({
-    fromPath: '/level-2/module-2/deploying-market',
-    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-2/deploying-market`
+    fromPath: '/quickstart/module-2/deploying-market',
+    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-2/deploying-market`
   });
 
   createRedirect({
-    fromPath: '/level-2/module-3/',
-    toPath: `/${FALLBACK_LOCALE}/level-2/learn/module-3`
+    fromPath: '/quickstart/module-3/',
+    toPath: `/${FALLBACK_LOCALE}/quickstart/learn/module-3`
   });
 
   createRedirect({
-    fromPath: '/level-2/module-3/backend-overview',
-    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-3/backend-overview`
+    fromPath: '/quickstart/module-3/backend-overview',
+    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-3/backend-overview`
   });
 
   createRedirect({
-    fromPath: '/level-2/module-3/ocean-provider',
-    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-3/ocean-provider`
+    fromPath: '/quickstart/module-3/ocean-provider',
+    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-3/ocean-provider`
   });
 
   createRedirect({
-    fromPath: '/level-2/module-3/ocean-aquarius',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-3/level-2/ocean-aquarius`
+    fromPath: '/quickstart/module-3/ocean-aquarius',
+    toPath: `/${FALLBACK_LOCALE}/learn/module-3/quickstart/ocean-aquarius`
   });
 
   createRedirect({
-    fromPath: '/level-2/module-4/',
-    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-4`
+    fromPath: '/quickstart/module-4/',
+    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-4`
   });
 
   createRedirect({
-    fromPath: '/level-2/module-4/deployment-guides',
-    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-4/deployment-guides`
+    fromPath: '/quickstart/module-4/deployment-guides',
+    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-4/deployment-guides`
   });
 
   createRedirect({
-    fromPath: '/level-2/module-4/devops-challenges',
-    toPath: `/${FALLBACK_LOCALE}/learn/level-2/module-4/devops-challenges`
+    fromPath: '/quickstart/module-4/devops-challenges',
+    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-4/devops-challenges`
   });
 
   createRedirect({
-    fromPath: '/level-3/',
-    toPath: `/${FALLBACK_LOCALE}/learn/level-3`
+    fromPath: '/customization/',
+    toPath: `/${FALLBACK_LOCALE}/learn/customization`
   });
 
   createRedirect({
-    fromPath: '/level-3/module-5',
-    toPath: `/${FALLBACK_LOCALE}/learn/level-3/module-5`
+    fromPath: '/customization/module-5',
+    toPath: `/${FALLBACK_LOCALE}/learn/customization/module-5`
   });
 
   createRedirect({
-    fromPath: '/level-3/module-6',
-    toPath: `/${FALLBACK_LOCALE}/learn/level-3/module-6`
+    fromPath: '/customization/module-6',
+    toPath: `/${FALLBACK_LOCALE}/learn/customization/module-6`
   });
 
   createRedirect({
-    fromPath: '/level-3/module-7',
-    toPath: `/${FALLBACK_LOCALE}/learn/level-3/module-7`
+    fromPath: '/customization/module-7',
+    toPath: `/${FALLBACK_LOCALE}/learn/customization/module-7`
   });
 
   createRedirect({
-    fromPath: '/level-3/module-8',
-    toPath: `/${FALLBACK_LOCALE}/learn/level-3/module-8`
+    fromPath: '/customization/module-8',
+    toPath: `/${FALLBACK_LOCALE}/learn/customization/module-8`
   });
 
   createRedirect({
