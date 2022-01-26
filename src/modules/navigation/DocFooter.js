@@ -1,7 +1,5 @@
 /** @jsx jsx */
-import {Fragment} from 'react';
-import {jsx, Text, Flex} from 'theme-ui';
-import {Icon} from '@makerdao/dai-ui-icons';
+import {jsx} from 'theme-ui';
 import {social, githubContentPath} from '../../../config';
 import {Link} from '@modules/navigation';
 
