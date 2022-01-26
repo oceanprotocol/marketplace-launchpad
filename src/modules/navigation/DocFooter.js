@@ -15,7 +15,13 @@ const DocFooter = (path) => {
   }
 
   return (
-    <div sx={{display: 'flex', justifyContent: 'space-between'}}>
+    <div
+      sx={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        marginTop: '30px',
+        fontSize: '0.9rem'
+      }}>
       <Link href={url} target="_blank" rel="noreferrer">
         ✏️ Edit this page on GitHub
       </Link>
