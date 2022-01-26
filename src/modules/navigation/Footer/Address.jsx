@@ -39,7 +39,8 @@ export default function Address() {
         </p>
         <p> 
           <small>
-              <Link to="/en/privacy">Privacy Policy</Link>
+              <Link style={{marginRight: '15px'}}to="/en/privacy">Privacy Policy</Link>
+              <Link to="/en/privacy/#cookies">Cookie Policy</Link>
           </small>
         </p>
     
