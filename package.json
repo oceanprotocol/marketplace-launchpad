@@ -89,7 +89,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 0",
-    "deploy": "surge ./public"
+    "deploy": "npm run build && surge ./public"
   },
   "pre-commit": [
     "precom-lint"
