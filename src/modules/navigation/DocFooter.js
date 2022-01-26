@@ -6,8 +6,13 @@ import {social, githubContentPath} from '../../../config';
 import {Link} from '@modules/navigation';
 
 const DocFooter = (path) => {
-  // console.log("path", path)
-  const url = githubContentPath + path.path;
+  let url = githubContentPath + path.path;
+  let file = path.path.split('/').pop();
+  if (file === '') {
+    url = url + 'index.mdx';
+  } else {
+    url = url + '.mdx';
+  }
 
   return (
     <div sx={{display: 'flex', justifyContent: 'space-between'}}>
