@@ -24,8 +24,6 @@ import {console} from 'window-or-global';
 
 export default (props) => {
   const {locale, t, DEFAULT_LOCALE} = useTranslation();
-  const urlPath = window.location.pathname;
-  console.log('url Path', urlPath);
   const {allMdx} = useStaticQuery(graphql`
     query getMDXData {
       # Regex for all files that are NOT config files
