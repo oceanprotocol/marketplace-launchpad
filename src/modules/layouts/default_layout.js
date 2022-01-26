@@ -65,7 +65,6 @@ export default (props) => {
     hideBreadcrumbs,
     isCorePage
   } = pageContext.frontmatter;
-
   //Core Pages store their own layout and functionality. Ignore everything and just return the children.
   if (isCorePage) {
     return <Fragment>{children}</Fragment>;
@@ -120,6 +119,14 @@ export default (props) => {
 
     return !isNil(edge.node) && nodePath === pagePath;
   })?.node.tableOfContents;
+
+  const fileAbsolutePath = allMdx.edges.find((edge) => {
+    let nodePath = UrlConverter(edge.node);
+    if (!edge.node.fileAbsolutePath.includes('index.mdx')) {
+      nodePath = `${nodePath}/`;
+    }
+    return !isNil(edge.node) && nodePath === pagePath;
+  })?.node.fileAbsolutePath;
 
   const statusProps =
     typeof status === 'object'
@@ -236,7 +243,7 @@ export default (props) => {
         <Box>{children}</Box>
 
         <Pager sidenavData={sidenavData} pagePath={pagePath} />
-        <DocFooter path={pagePath} />
+        <DocFooter path={pagePath} fileAbsolutePath={fileAbsolutePath} />
       </Box>
 
       <Box sx={{position: 'relative'}}>
