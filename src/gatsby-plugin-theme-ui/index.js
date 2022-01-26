@@ -214,7 +214,7 @@ export default {
     surfaceAlt: '#fafafa',
     surfaceDark: '#212144',
     muted: '#D0D3D7',
-    link: '#7b1173',
+    link: '#8b98a9',
     linkAlt: '#ff4092',
     mutedAlt: '#90969C',
     // mutedAlt: '',
