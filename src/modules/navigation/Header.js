@@ -99,7 +99,7 @@ const HeaderNav = ({headerLinks, hideMenu}) => {
           height: '52px'
         }}>
         <div>
-          <Icon name="kernel_icon_color" color="primary" size={'52px'} />
+          <Icon name="ocean_icon_black" color="primary" size={'52px'} />
         </div>
       </Link>
       <Flex

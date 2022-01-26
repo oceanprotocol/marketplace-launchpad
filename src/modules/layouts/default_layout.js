@@ -9,7 +9,12 @@ import {useLocation} from '@reach/router';
 import {MobileNav} from '@modules/navigation';
 import {useTranslation} from '@modules/localization/';
 import {LanguageSelector} from '@modules/localization';
-import {Sidenav, Breadcrumbs, TableOfContents} from '@modules/navigation';
+import {
+  Sidenav,
+  Breadcrumbs,
+  TableOfContents,
+  DocFooter
+} from '@modules/navigation';
 import {StatusBanner} from '@modules/ui';
 import calculateTreeData from '@modules/navigation/calculateTreeData';
 import {SEO} from '@modules/utility';
@@ -19,7 +24,6 @@ import {console} from 'window-or-global';
 
 export default (props) => {
   const {locale, t, DEFAULT_LOCALE} = useTranslation();
-
   const {allMdx} = useStaticQuery(graphql`
     query getMDXData {
       # Regex for all files that are NOT config files
@@ -80,7 +84,6 @@ export default (props) => {
     locale,
     pathDirs
   );
-
   //NOTE(Rejon): Must be in the shape that React Select expects for it's options.
   //Something that can be queried?
   const languageSelectorData = allMdx.edges
@@ -233,6 +236,7 @@ export default (props) => {
         <Box>{children}</Box>
 
         <Pager sidenavData={sidenavData} pagePath={pagePath} />
+        <DocFooter path={pagePath} />
       </Box>
 
       <Box sx={{position: 'relative'}}>
