@@ -37,6 +37,11 @@ export default function Address() {
             © {year} Ocean Protocol — Ocean Protocol Foundation Ltd. 
           </small>
         </p>
+        <p> 
+          <small>
+              <Link to="/en/privacy">Privacy Policy</Link>
+          </small>
+        </p>
     
       </div>
     </div>

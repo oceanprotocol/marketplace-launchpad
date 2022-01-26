@@ -43,6 +43,11 @@ exports.createPages = async ({graphql, actions}) => {
   });
 
   createRedirect({
+    fromPath: '/privacy/',
+    toPath: `/${FALLBACK_LOCALE}/privacy`
+  });
+
+  createRedirect({
     fromPath: '/orientation/',
     toPath: `/${FALLBACK_LOCALE}/learn/orientation`
   });
