@@ -22,7 +22,9 @@ const LeadCapture = ({children, ...otherProps}) => {
         bg: 'primaryMuted'
       }}
       onSubmit={handleSubmit}>
-      <b>Would you like to know more about our enterprise packages?</b>
+      <b>
+        Would you like to know more about how we can support your enterprise?
+      </b>
       <Label htmlFor="email">Leave your email and we'll be in touch</Label>
       <Input
         name="email"
