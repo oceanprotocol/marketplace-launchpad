@@ -126,13 +126,13 @@ const HeaderNav = ({headerLinks, hideMenu}) => {
         </Link>
 
         <Link
-          to={'/learn'}
+          to={'/setup'}
           hideExternalIcon
           sx={{
             fontWeight: 'normal',
             flexShrink: 0
           }}>
-          {t('Learn')}
+          {t('Setup Guide')}
         </Link>
 
         <Link
@@ -146,13 +146,22 @@ const HeaderNav = ({headerLinks, hideMenu}) => {
         </Link>
 
         <Link
-          to={'/learn/faq'}
+          to={'/faq'}
           hideExternalIcon
           sx={{
             fontWeight: 'normal',
             flexShrink: 0
           }}>
           {t('FAQ')}
+        </Link>
+        <Link
+          to={'/support'}
+          hideExternalIcon
+          sx={{
+            fontWeight: 'normal',
+            flexShrink: 0
+          }}>
+          {t('Support')}
         </Link>
       </Flex>
     </Fragment>

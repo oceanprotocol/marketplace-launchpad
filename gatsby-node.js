@@ -49,142 +49,142 @@ exports.createPages = async ({graphql, actions}) => {
 
   createRedirect({
     fromPath: '/orientation/',
-    toPath: `/${FALLBACK_LOCALE}/learn/orientation`
+    toPath: `/${FALLBACK_LOCALE}/setup/orientation`
   });
 
   createRedirect({
     fromPath: '/orientation/intro-to-web3',
-    toPath: `/${FALLBACK_LOCALE}/learn/orientation/intro-to-web3`
+    toPath: `/${FALLBACK_LOCALE}/setup/orientation/intro-to-web3`
   });
 
   createRedirect({
     fromPath: '/orientation/marketplace-intro',
-    toPath: `/${FALLBACK_LOCALE}/learn/orientation/marketplace-intro`
+    toPath: `/${FALLBACK_LOCALE}/setup/orientation/marketplace-intro`
   });
 
   createRedirect({
     fromPath: '/orientation/mission-statement',
-    toPath: `/${FALLBACK_LOCALE}/learn/orientation/mission-statement`
+    toPath: `/${FALLBACK_LOCALE}/setup/orientation/mission-statement`
   });
 
   createRedirect({
     fromPath: '/orientation/wallet-basics',
-    toPath: `/${FALLBACK_LOCALE}/learn/orientation/wallet-basics`
+    toPath: `/${FALLBACK_LOCALE}/setup/orientation/wallet-basics`
+  });
+
+  // createRedirect({
+  //   fromPath: '/',
+  //   toPath: `/${FALLBACK_LOCALE}/setup/quickstart`
+  // });
+
+  createRedirect({
+    fromPath: '/module-1/',
+    toPath: `/${FALLBACK_LOCALE}/setup/module-1`
   });
 
   createRedirect({
-    fromPath: '/quickstart/',
-    toPath: `/${FALLBACK_LOCALE}/learn/quickstart`
-  });
-
-  createRedirect({
-    fromPath: '/quickstart/module-1/',
-    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-1`
-  });
-
-  createRedirect({
-    fromPath: '/quickstart/module-1/introduction',
-    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-1/introduction`
+    fromPath: '/module-1/introduction',
+    toPath: `/${FALLBACK_LOCALE}/setup/module-1/introduction`
   });
 
   createRedirect({
     fromPath: '/module-1/user-flows',
-    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-1/user-flows`
+    toPath: `/${FALLBACK_LOCALE}/setup/module-1/user-flows`
   });
 
   createRedirect({
-    fromPath: '/quickstart/module-1/core-concepts',
-    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-1/core-concepts`
+    fromPath: '/module-1/core-concepts',
+    toPath: `/${FALLBACK_LOCALE}/setup/module-1/core-concepts`
   });
 
   createRedirect({
-    fromPath: '/quickstart/module-2/',
-    toPath: `/${FALLBACK_LOCALE}/quickstart/learn/module-2`
+    fromPath: '/module-2/',
+    toPath: `/${FALLBACK_LOCALE}/setup/module-2`
   });
 
   createRedirect({
-    fromPath: '/quickstart/module-2/forking-ocean-market',
-    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-2/forking-ocean-market`
+    fromPath: '/module-2/forking-ocean-market',
+    toPath: `/${FALLBACK_LOCALE}/setup/module-2/forking-ocean-market`
   });
 
   createRedirect({
-    fromPath: '/quickstart/module-2/customising-market',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-2/customising-market`
+    fromPath: '/module-2/customising-market',
+    toPath: `/${FALLBACK_LOCALE}/setup/module-2/customising-market`
   });
 
   createRedirect({
-    fromPath: '/quickstart/module-2/deploying-market',
-    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-2/deploying-market`
+    fromPath: '/module-2/deploying-market',
+    toPath: `/${FALLBACK_LOCALE}/setup/module-2/deploying-market`
   });
 
   createRedirect({
-    fromPath: '/quickstart/module-3/',
-    toPath: `/${FALLBACK_LOCALE}/quickstart/learn/module-3`
+    fromPath: '/module-3/',
+    toPath: `/${FALLBACK_LOCALE}/setup/module-3`
   });
 
   createRedirect({
-    fromPath: '/quickstart/module-3/backend-overview',
-    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-3/backend-overview`
+    fromPath: '/module-3/backend-overview',
+    toPath: `/${FALLBACK_LOCALE}/setup/module-3/backend-overview`
   });
 
   createRedirect({
-    fromPath: '/quickstart/module-3/ocean-provider',
-    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-3/ocean-provider`
+    fromPath: '/module-3/ocean-provider',
+    toPath: `/${FALLBACK_LOCALE}/setup/module-3/ocean-provider`
   });
 
   createRedirect({
-    fromPath: '/quickstart/module-3/ocean-aquarius',
-    toPath: `/${FALLBACK_LOCALE}/learn/module-3/quickstart/ocean-aquarius`
+    fromPath: '/module-3/ocean-aquarius',
+    toPath: `/${FALLBACK_LOCALE}/setup/module-3/ocean-aquarius`
   });
 
   createRedirect({
-    fromPath: '/quickstart/module-4/',
-    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-4`
+    fromPath: '/module-4/',
+    toPath: `/${FALLBACK_LOCALE}/setup/module-4`
   });
 
   createRedirect({
-    fromPath: '/quickstart/module-4/deployment-guides',
-    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-4/deployment-guides`
+    fromPath: '/module-4/deployment-guides',
+    toPath: `/${FALLBACK_LOCALE}/setup/module-4/deployment-guides`
   });
 
   createRedirect({
-    fromPath: '/quickstart/module-4/devops-challenges',
-    toPath: `/${FALLBACK_LOCALE}/learn/quickstart/module-4/devops-challenges`
+    fromPath: '/module-4/devops-challenges',
+    toPath: `/${FALLBACK_LOCALE}/setup/module-4/devops-challenges`
   });
 
   createRedirect({
     fromPath: '/customization/',
-    toPath: `/${FALLBACK_LOCALE}/learn/customization`
+    toPath: `/${FALLBACK_LOCALE}/setup/customization`
   });
 
   createRedirect({
     fromPath: '/customization/module-5',
-    toPath: `/${FALLBACK_LOCALE}/learn/customization/module-5`
+    toPath: `/${FALLBACK_LOCALE}/setup/customization/module-5`
   });
 
   createRedirect({
     fromPath: '/customization/module-6',
-    toPath: `/${FALLBACK_LOCALE}/learn/customization/module-6`
+    toPath: `/${FALLBACK_LOCALE}/setup/customization/module-6`
   });
 
   createRedirect({
     fromPath: '/customization/module-7',
-    toPath: `/${FALLBACK_LOCALE}/learn/customization/module-7`
+    toPath: `/${FALLBACK_LOCALE}/setup/customization/module-7`
   });
 
   createRedirect({
     fromPath: '/customization/module-8',
-    toPath: `/${FALLBACK_LOCALE}/learn/customization/module-8`
+    toPath: `/${FALLBACK_LOCALE}/setup/customization/module-8`
   });
 
   createRedirect({
     fromPath: '/level-5/',
-    toPath: `/${FALLBACK_LOCALE}/learn/level-5`
+    toPath: `/${FALLBACK_LOCALE}/setup/level-5`
   });
 
   createRedirect({
     fromPath: '/support/',
-    toPath: `/${FALLBACK_LOCALE}/learn/support`
+    toPath: `/${FALLBACK_LOCALE}/setup/support`
   });
 
   createRedirect({
