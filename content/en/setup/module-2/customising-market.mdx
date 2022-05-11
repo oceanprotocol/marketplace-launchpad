@@ -117,6 +117,40 @@ As with the colour changes, it’s a good idea to save the file with each change
 
 ![marketCustomisation](/images/marketCustomisation/13.png)
 
+## Customise the Publish Form
+
+Let’s head on over to the publish page to see what it looks like with our new styling - so far so good. But there is one major issue, the publish form is still telling people to publish datasets. On our new marketplace we want people to publish and sell their photos, so we’re going to have to make some changes here.
+
+![marketCustomisation](/images/marketCustomisation/14.png)
+
+Open up the index.json file from content/publish/index.json - here we change the text to explain that that this form is for publishing photos.
+
+![marketCustomisation](/images/marketCustomisation/15.png)
+
+Additionally, the asset type current says dataset and we need to change this so that it says photo. The simplest way to do this is to change the title of the asset type, without changing anything else. Ocean can handle selling any digital asset that can be accessed via a URL so no further changes are needed to accommodate selling photos.
+
+Open up src/components/Publish/Metadata/index.tsx and change line 28 so that it says ‘Photo’
+
+![marketCustomisation](/images/marketCustomisation/18.png)
+
+Great, now our publish page explains that users should be publishing photos and photo is provided as an asset type option. We’ll also leave algorithm as an option in case some data scientists want to do some analysis or image transformation on the photos.
+
+![marketCustomisation](/images/marketCustomisation/19.png)
+
+There is one more thing that is fun to change before we move away from the publish form. You’ll notice that Ocean Market V4 now has a cool SVG generate which creates the images for the Data NFT. It creates a series of pink waves, let’s change this so that it uses our brand colors in the waves!
+
+Open up /src/@utils/SvgWaves.ts and have a look at lines 27 to 30 where the colours are specified. Currently the pink color is the one used in the svg generator, you can replace this with your own brand color:
+
+![marketCustomisation](/images/marketCustomisation/21.png)
+
+If you’re interested in doing some further customisation, take a look at lines 53 to 64. You can change these properties to alter how the image looks, feel free to play around with it a bit. We’ve increased the number of layers from 4 to 5.
+
+![marketCustomisation](/images/marketCustomisation/22.png)
+
+And now your customised publish page is ready for your customers:
+
+![marketCustomisation](/images/marketCustomisation/20.png)
+
 ## Change the Fee Address
 
 At this point, we have made a lot of changes and hopefully you’re happy with the way that your data marketplace is looking. Given that you now have your own awesome data marketplace, it’s about time we talked about monetizing it. Yeah, that’s right — you will earn a commission when people buy and sell data assets on your marketplace.
