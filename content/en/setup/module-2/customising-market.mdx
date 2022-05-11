@@ -153,16 +153,34 @@ And now your customised publish page is ready for your customers:
 
 ## Change the Fee Address
 
-At this point, we have made a lot of changes and hopefully you’re happy with the way that your data marketplace is looking. Given that you now have your own awesome data marketplace, it’s about time we talked about monetizing it. Yeah, that’s right — you will earn a commission when people buy and sell data assets on your marketplace.
+At this point, we have made a lot of changes and hopefully you’re happy with the way that your marketplace is looking. Given that you now have your own awesome photo marketplace, it’s about time we talked about monetizing it. Yup, that’s right - you will earn a commission when people buy and sell photos in your marketplace. In Ocean V4 there are a whole host of new fees and customisation options that you can use (read more about that here).
 
-When someone sets the pricing for their data assets in your marketplace they are informed that a commission will be sent to the owner of the data marketplace. In order to receive this commission, you need to set the market to send the commission through to your Ethereum address.
+When someone sets the pricing for their photos in your marketplace they are informed that a commission will be sent to the owner of the marketplace. You see that at the moment this fee is set to zero, so you’ll want to increase that. And in order to receive the fees you’ll you need to set the address that you want to recieve these fees in.
 
-This important step is the last thing that we will change in this guide. To change the address that the marketplace fees are sent to you need to set your address as an environmental variable. Create a new file called .env in the root of your repository. It is important that the file is saved in the right place, your file structure should look the same as below.
+![marketCustomisation](/images/marketCustomisation/23.png)
 
-<Process>
+This important step is the last thing that we will change in this guide. To set the marketplace fees and set the address you’ll need to save them as environmental vairables. Create a new file called .env in the root of your repository.
 
-Now copy and paste the following into the file: `GATSBY_MARKET_FEE_ADDRESS=”0xxx”`
+Copy and paste the following into the file:
 
-You need to replace “0xxx” with your Ethereum address and save the file. And that’s it, you now have a fully functioning data marketplace that will earn you revenue every time someone uses it.
+```
 
-</Process>
+NEXT_PUBLIC_MARKET_FEE_ADDRESS="0x123abc"
+NEXT_PUBLIC_PUBLISHER_MARKET_ORDER_FEE="0.01"
+NEXT_PUBLIC_PUBLISHER_MARKET_POOL_SWAP_FEE="0.01"
+NEXT_PUBLIC_PUBLISHER_MARKET_FIXED_SWAP_FEE="0.01"
+NEXT_PUBLIC_CONSUME_MARKET_ORDER_FEE="0.01"
+NEXT_PUBLIC_CONSUME_MARKET_POOL_SWAP_FEE="0.01"
+NEXT_PUBLIC_CONSUME_MARKET_FIXED_SWAP_FEE="0.01"
+
+```
+
+You need to replace “0x123abc” with your ethereum address (this is where the fees will be sent) and alter the fees to the levels that you intend them to be at. If you change you mind, these fees can always be altered later.
+
+It is important that the file is saved in the right place at the root of your repository, your file structure should look the same as below.
+
+![marketCustomisation](/images/marketCustomisation/24.png)
+
+Now that’s it, you now have a fully functioning photo marketplace that operates over the blockchain. Everytime someone uses it, you will recieve revenue.
+
+![marketCustomisation](/images/marketCustomisation/25.png)
