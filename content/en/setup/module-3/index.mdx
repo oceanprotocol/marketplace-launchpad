@@ -1,6 +1,6 @@
 ---
 title: Backend overview
-order: 1
+order: 4
 hideLanguageSelector: true
 description: Aenean nulla nibh, tristique ac mollis quis, porta eu sem. Duis et metus ac mi bibendum facilisis a id leo. Nullam.
 featuredImage: images/shares/intention.png
@@ -8,11 +8,13 @@ featuredImage: images/shares/intention.png
 
 # Overview of Ocean Backend Components
 
+Now that you have your Ocean-powered marketplace up and running, the next steps are to start looking into the backend components.
+
 ---
 
-## Ocean Metadata Storage (aka: Aquarius)
+## Aquarius - Ocean Metadata Storage
 
-## What is Aquarius?
+### What is Aquarius?
 
 Aquarius is an off-chain, multi-chain cache for metadata that is published on chain, connected to an Elasticsearch database. Aquarius continually monitors the chains for MetadataCreated and MetadataUpdated events, processes these events and adds them to the database. The Aquarius API offers a convenient way to access the medatata without scanning the chain yourself.
 
@@ -23,17 +25,6 @@ Aquarius is part of the [Ocean Protocol](https://oceanprotocol.com) toolset. ðŸŒ
 - Stores metadata for Ocean Protocol Assets
 - Decentralized, reads metadata events from blockchain and caches them
 - All aquarius instances will contain the same data -> load balancing, fail over
-
-### How is metadata treated?
-
-The metadata is published on-chain as such:
-
-- Metadata is first (optionally) compressed (using lzma) and (strongly recommended) encrypted, then published on-chain
-- The metadata on-chain is not kept in storage, but rather is captured in an event log named `MetadataCreated`
-- Aquarius defers to the Provider for encryption and decryption. Aquarius and Provider support utf-8 encoded strings. You can look into the encrypt/decrypt flows if you want to learn more, but you will generally not need to go in-depth just to use Aquarius.
-
-For more details on working with OCEAN DIDs check out the [DID concept documentation](https://docs.oceanprotocol.com/concepts/did-ddo/).
-The [DDO Metadata documentation](https://docs.oceanprotocol.com/concepts/ddo-metadata/) goes into more depth regarding metadata structure.
 
 ### Technology used:
 
@@ -48,7 +39,7 @@ Python Flask HTTP server + Elastic Search
 
 ---
 
-## Ocean Proxy (Provider)
+## Provider - Ocean Proxy Service
 
 ### What it does:
 
