@@ -1,62 +1,87 @@
 ---
-title: Setup Backend Components
-order: 3
+title: Backend overview
+order: 4
 hideLanguageSelector: true
-description: Step by step guide to getting your own fully functioning customised fork of Ocean backend components deployed and working.
-featuredImage: images/shares/freedom.png
+description: Aenean nulla nibh, tristique ac mollis quis, porta eu sem. Duis et metus ac mi bibendum facilisis a id leo. Nullam.
+featuredImage: images/shares/intention.png
 ---
 
-# 🐟 Forking and Setting up Ocean Backend Components
+# Overview of Ocean Backend Components
 
-## Outcome
+Now that you have your Ocean-powered marketplace up and running, the next steps are to start looking into the backend components.
 
-Your own fully functioning customised fork of Ocean backend components deployed and working.
+---
 
-## Description
+## Aquarius - Ocean Metadata Storage
 
-This interactive opening module provides the foundation for individuals and businesses to think of data more like an asset rather than information. Starting with a high level overview of Ocean Protocol this module will examine different components of the Ocean architecture and explain how Ocean enables data sharing while maintaining privacy. By the end of the session participants will know how to publish and consume data on Ocean Protocol.
+### What is Aquarius?
 
-## Content
+Aquarius is an off-chain, multi-chain cache for metadata that is published on chain, connected to an Elasticsearch database. Aquarius continually monitors the chains for MetadataCreated and MetadataUpdated events, processes these events and adds them to the database. The Aquarius API offers a convenient way to access the medatata without scanning the chain yourself.
 
-The module covers:
+Aquarius is part of the [Ocean Protocol](https://oceanprotocol.com) toolset. 🌊
 
-<Process>
-Overview of Ocean backend components
+### What it does:
 
-Setting up and deploying your own proxy (Ocean Provider)
+- Stores metadata for Ocean Protocol Assets
+- Decentralized, reads metadata events from blockchain and caches them
+- All aquarius instances will contain the same data -> load balancing, fail over
 
-Setting up and deploying your own metadata cache (Ocean Aquarius)
+### Technology used:
 
-</Process>
+Python Flask HTTP server + Elastic Search
 
-## Preparation
+### Further Reading
 
-<u>Prior knowledge</u>
+- [Aquarius Readme](https://github.com/oceanprotocol/aquarius)
+- [Aquarius REST API documentation](https://docs.oceanprotocol.com/references/aquarius/)
+- [DID concept documentation](https://docs.oceanprotocol.com/concepts/did-ddo/)
+- [DDO Metadata documentation](https://docs.oceanprotocol.com/concepts/ddo-metadata/)
 
-- Basic knowledge of python
+---
 
-<u>Required Prerequisites</u>
+## Provider - Ocean Proxy Service
 
-- Complete modules 1 and 2
+### What it does:
 
-## Module 3 Videos
+- The only component that can access your data
+- Performs checks on chain for buyer permissions and payments
+- Encrypts URL and metadata during publish
+- Decrypts URL during consume
+- Provides access to data assets by streaming data (and never the URL)
+- Provides compute services (connects to C2D environment)
+- Typically run by Data Provider
 
-<Column sx={{ gap:"10%"}}>
+### Technology used:
 
-<Box>
+Python Flask HTTP server
 
-**Ocean Protocol 2021 High Tide Wrap-up**
+### Further Reading
 
-<Video src="https://www.youtube.com/embed/BS1d6dir2_U" />
+- [Provider Readme](https://github.com/oceanprotocol/provider)
 
-</Box>
+---
 
-<Box>
+## Libraries (Ocean.js, Ocean.py)
 
-**Ocean Protocol - World Economic Forum 2021**
+### What it does:
 
-<Video src="https://www.youtube.com/embed/etv7r3BE7kU" />
+- Connect all components together
+- Facilitate publish/register and consume/purchase flows (only a few lines of code)
 
-</Box>
+Ocean libraries comes in two flavours:
 
-</Column>
+- Ocean.js
+- Ocean.py
+
+You can also have your own implementation of Ocean library (e.g. ocean.go)
+
+### Technology used:
+
+Javascript, Python
+
+### Further Reading
+
+- [Ocean.js Readme](https://github.com/oceanprotocol/ocean.js)
+- [Ocean.py Readme](https://github.com/oceanprotocol/provider)
+
+---
