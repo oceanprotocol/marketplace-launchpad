@@ -1,62 +1,87 @@
 ---
-title: Setup Backend Components
-order: 3
+title: Backend overview
+order: 1
 hideLanguageSelector: true
-description: Step by step guide to getting your own fully functioning customised fork of Ocean backend components deployed and working.
-featuredImage: images/shares/freedom.png
+description: Aenean nulla nibh, tristique ac mollis quis, porta eu sem. Duis et metus ac mi bibendum facilisis a id leo. Nullam.
+featuredImage: images/shares/intention.png
 ---
 
-# 🐟 Forking and Setting up Ocean Backend Components
+# Overview of Ocean Backend Components
 
-## Outcome
+---
 
-Your own fully functioning customised fork of Ocean backend components deployed and working.
+## Ocean Metadata Storage (aka: Aquarius)
 
-## Description
+## What is Aquarius?
 
-This interactive opening module provides the foundation for individuals and businesses to think of data more like an asset rather than information. Starting with a high level overview of Ocean Protocol this module will examine different components of the Ocean architecture and explain how Ocean enables data sharing while maintaining privacy. By the end of the session participants will know how to publish and consume data on Ocean Protocol.
+Aquarius is an off-chain, multi-chain cache for metadata that is published on chain, connected to an Elasticsearch database. Aquarius continually monitors the chains for MetadataCreated and MetadataUpdated events, processes these events and adds them to the database. The Aquarius API offers a convenient way to access the medatata without scanning the chain yourself.
 
-## Content
+Aquarius is part of the [Ocean Protocol](https://oceanprotocol.com) toolset. 🌊
 
-The module covers:
+### What it does:
 
-<Process>
-Overview of Ocean backend components
+- Stores metadata for Ocean Protocol Assets
+- Decentralized, reads metadata events from blockchain and caches them
+- All aquarius instances will contain the same data -> load balancing, fail over
 
-Setting up and deploying your own proxy (Ocean Provider)
+### How is metadata treated?
 
-Setting up and deploying your own metadata cache (Ocean Aquarius)
+The metadata is published on-chain as such:
 
-</Process>
+- Metadata is first (optionally) compressed (using lzma) and (strongly recommended) encrypted, then published on-chain
+- The metadata on-chain is not kept in storage, but rather is captured in an event log named `MetadataCreated`
+- Aquarius defers to the Provider for encryption and decryption. Aquarius and Provider support utf-8 encoded strings. You can look into the encrypt/decrypt flows if you want to learn more, but you will generally not need to go in-depth just to use Aquarius.
 
-## Preparation
+For more details on working with OCEAN DIDs check out the [DID concept documentation](https://docs.oceanprotocol.com/concepts/did-ddo/).
+The [DDO Metadata documentation](https://docs.oceanprotocol.com/concepts/ddo-metadata/) goes into more depth regarding metadata structure.
 
-<u>Prior knowledge</u>
+### Technology used:
 
-- Basic knowledge of python
+Python Flask HTTP server + Elastic Search
 
-<u>Required Prerequisites</u>
+### Further Reading
 
-- Complete modules 1 and 2
+- [Aquarius Readme](https://github.com/oceanprotocol/aquarius)
+- [Aquarius REST API documentation](https://docs.oceanprotocol.com/references/aquarius/)
+- [DID concept documentation](https://docs.oceanprotocol.com/concepts/did-ddo/)
+- [DDO Metadata documentation](https://docs.oceanprotocol.com/concepts/ddo-metadata/)
 
-## Module 3 Videos
+---
 
-<Column sx={{ gap:"10%"}}>
+## Ocean Proxy (Provider)
 
-<Box>
+### What it does:
 
-**Ocean Protocol 2021 High Tide Wrap-up**
+- The only component that should access your data
+- Performs checks on chain for buyer permissions and payments
+- Encrypts URL during publish
+- Decrypts URL during consume
+- Provides access to data assets by streaming data (and never the URL)
+- Provides compute services (connects to C2D environment)
+- Typically run by Data Provider
 
-<Video src="https://www.youtube.com/embed/BS1d6dir2_U" />
+### Technology used:
 
-</Box>
+Python Flask HTTP server
 
-<Box>
+---
 
-**Ocean Protocol - World Economic Forum 2021**
+## Libraries (Ocean.js, Ocean.py)
 
-<Video src="https://www.youtube.com/embed/etv7r3BE7kU" />
+### What it does:
 
-</Box>
+- Connect all components together
+- Facilitate publish/register and consume/purchase flows (only a few lines of code)
 
-</Column>
+Ocean libraries comes in two flavours:
+
+- Ocean.js
+- Ocean.py
+
+You can also have your own implementation of Ocean library (e.g. ocean.go)
+
+### Technology used:
+
+Javascript, Python
+
+---
