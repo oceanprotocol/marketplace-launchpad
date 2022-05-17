@@ -37,7 +37,7 @@ const PageLayout = ({children, seoTitle, t}) => (
       {children}
       <Box sx={{mt: 4}}>
         <Button
-          to={'https://github.com/kernel-community/kernel-v2/issues'}
+          to={'https://github.com/oceanprotocol/marketplace-launchpad/issues'}
           inline
           sx={{
             mt: '5px',
