@@ -81,11 +81,11 @@ function SEO({description, lang, meta, title, keywords, url, featuredImage}) {
         },
         {
           property: 'og:image',
-          content: `images/creatures/mantaray/mantaray-full@2x.png`
+          content: `https://marketplace-launchpad.surge.sh/en/${featuredImage}`
         },
         {
           name: 'twitter:image',
-          content: `images/creatures/mantaray/mantaray-full@2x.png`
+          content: `https://marketplace-launchpad.surge.sh/en/${featuredImage}`
         },
         {
           name: `twitter:description`,
