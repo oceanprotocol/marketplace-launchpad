@@ -19,11 +19,11 @@ const IndexPage = () => {
   });
 
   const seo = {
-    title: 'Kernel Community',
+    title: 'Ocean Protocol Marketplace Launchpad',
     description:
-      'A peer-to-peer, lifelong learning community of the most talented individuals in web3',
-    keywords: 'community, kernel, contribute',
-    featuredImage: 'images/shares/giving.png'
+      'Learn how to make your own blockchain-powered marketplace by forking Ocean Market',
+    keywords: 'Ocean protocol, learning, community, marketplace, contribute',
+    featuredImage: 'images/creatures/mantaray/mantaray-full@2x.png'
   };
 
   return (

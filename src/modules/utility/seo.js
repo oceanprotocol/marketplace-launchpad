@@ -81,11 +81,11 @@ function SEO({description, lang, meta, title, keywords, url, featuredImage}) {
         },
         {
           property: 'og:image',
-          content: `https://kernel.community/${featuredImage}`
+          content: `${featuredImage}`
         },
         {
           name: 'twitter:image',
-          content: `https://kernel.community/${featuredImage}`
+          content: `${featuredImage}`
         },
         {
           name: `twitter:description`,
@@ -96,7 +96,7 @@ function SEO({description, lang, meta, title, keywords, url, featuredImage}) {
           content: theme.colors.primary
         }
       ].concat(meta)}>
-      <link rel="icon" href={'/images/icons/favicon-white.png'} />
+      <link rel="icon" href={'/images/icons/favicon.ico'} />
     </Helmet>
   );
 }
