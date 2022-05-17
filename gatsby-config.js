@@ -252,7 +252,7 @@ module.exports = {
         theme_color: '#5AE2CA',
         display: `standalone`,
         include_favicon: false,
-        icon: 'src/modules/utility/icon-512x512.png',
+        icon: 'static/images/icons/icon-512x512.png',
         cache_busting_mode: 'none',
         theme_color_in_head: false
       }
