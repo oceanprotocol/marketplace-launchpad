@@ -81,11 +81,11 @@ function SEO({description, lang, meta, title, keywords, url, featuredImage}) {
         },
         {
           property: 'og:image',
-          content: `static/images/creatures/mantaray/mantaray-full@2x.png`
+          content: `images/creatures/mantaray/mantaray-full@2x.png`
         },
         {
           name: 'twitter:image',
-          content: `static/images/creatures/mantaray/mantaray-full@2x.png`
+          content: `images/creatures/mantaray/mantaray-full@2x.png`
         },
         {
           name: `twitter:description`,
