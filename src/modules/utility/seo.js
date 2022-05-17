@@ -81,11 +81,11 @@ function SEO({description, lang, meta, title, keywords, url, featuredImage}) {
         },
         {
           property: 'og:image',
-          content: `https://marketplace-launchpad.surge.sh/en/${featuredImage}`
+          content: `https://marketplace-launchpad.surge.sh/${featuredImage}`
         },
         {
           name: 'twitter:image',
-          content: `https://marketplace-launchpad.surge.sh/en/${featuredImage}`
+          content: `https://marketplace-launchpad.surge.sh/${featuredImage}`
         },
         {
           name: `twitter:description`,
