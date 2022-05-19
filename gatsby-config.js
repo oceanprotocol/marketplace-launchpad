@@ -6,13 +6,7 @@ const removeFrontmatter = () => (tree) =>
   // eslint-disable-next-line
   filter(tree, (node) => node.type !== 'yaml');
 const visit = require('unist-util-visit');
-const {console} = require('window-or-global');
-const {
-  TitleConverter,
-  UrlConverter,
-  getBlogPostTypeFromPath,
-  sanitizeAnchorLink
-} = require('./src/build-utils');
+const {TitleConverter, UrlConverter} = require('./src/build-utils');
 require('dotenv').config();
 
 module.exports = {
