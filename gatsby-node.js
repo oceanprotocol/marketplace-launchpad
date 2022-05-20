@@ -88,8 +88,8 @@ exports.createPages = async ({graphql, actions}) => {
   });
 
   createRedirect({
-    fromPath: '/module-1/user-flows',
-    toPath: `/${FALLBACK_LOCALE}/setup/module-1/user-flows`
+    fromPath: '/module-1/publish-flow',
+    toPath: `/${FALLBACK_LOCALE}/setup/module-1/publish-flow`
   });
 
   createRedirect({
