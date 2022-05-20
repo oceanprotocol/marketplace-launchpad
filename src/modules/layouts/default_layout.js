@@ -20,7 +20,6 @@ import calculateTreeData from '@modules/navigation/calculateTreeData';
 import {SEO} from '@modules/utility';
 import {UrlConverter, getLocaleFromPath} from '@utils';
 import {Pager} from '../navigation/Pager';
-import {console} from 'window-or-global';
 
 export default (props) => {
   const {locale, t, DEFAULT_LOCALE} = useTranslation();
