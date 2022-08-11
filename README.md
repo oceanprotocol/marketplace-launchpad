@@ -1,3 +1,5 @@
+This repo is archived. The marketplace launchpad content is available on [Ocean Documentation](https://docs.oceanprotocol.com/building-with-ocean/build-a-marketplace).
+
 # Ocean Marketplace Launchpad
 
 Learn how to setup your own data marketplace with blockchain super powers!
